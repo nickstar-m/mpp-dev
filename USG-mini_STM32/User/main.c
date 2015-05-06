@@ -29,9 +29,10 @@ void GPIO_init (void)
 }
 
 // Timer TIM6 init proc
-void TIM6_init()
+void TIM6_init(void)
 {
-  
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6, ENABLE);
+
 }
 
 // Display & keyboard handler

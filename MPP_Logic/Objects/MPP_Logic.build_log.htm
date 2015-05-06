@@ -1,0 +1,143 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Nik Microsoft, Microsoft, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      UL2CM3.DLL V1.155.0.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+D:\work\repo\MPP_Logic\MPP_Logic.uvprojx
+Project File Date:  05/06/2015
+
+<h2>Output:</h2>
+Rebuild target 'STM32F030R8T6'
+Clean started - Project: 'MPP_Logic'
+   deleting intermediate output files for target 'STM32F030R8T6'
+compiling init_periph.c...
+User\init_periph.c(6): warning:  #223-D: function "RCC_AHBPeriphClockCmd" declared implicitly
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+User\init_periph.c(6): error:  #20: identifier "RCC_AHBPeriph_GPIOA" is undefined
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+User\init_periph.c(7): error:  #268: declaration may not appear after executable statement in block
+      GPIO_InitTypeDef GPIO_InitStructure;
+User\init_periph.c(7): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+      GPIO_InitTypeDef GPIO_InitStructure;
+User\init_periph.c(9): error:  #20: identifier "GPIO_Pin_4" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_14 | GPIO_Pin_15;
+User\init_periph.c(9): error:  #20: identifier "GPIO_Pin_14" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_14 | GPIO_Pin_15;
+User\init_periph.c(9): error:  #20: identifier "GPIO_Pin_15" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_14 | GPIO_Pin_15;
+User\init_periph.c(10): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+      GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+User\init_periph.c(11): error:  #20: identifier "GPIO_OType_PP" is undefined
+      GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+User\init_periph.c(12): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+      GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+User\init_periph.c(13): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+      GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+User\init_periph.c(14): warning:  #223-D: function "GPIO_Init" declared implicitly
+      GPIO_Init(GPIOA, &GPIO_InitStructure);
+User\init_periph.c(15): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+      GPIO_SetBits(GPIOA,GPIO_Pin_4);
+User\init_periph.c(18): error:  #20: identifier "GPIO_Pin_11" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13;
+User\init_periph.c(18): error:  #20: identifier "GPIO_Pin_12" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13;
+User\init_periph.c(18): error:  #20: identifier "GPIO_Pin_13" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13;
+User\init_periph.c(19): error:  #20: identifier "GPIO_Mode_IN" is undefined
+      GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+User\init_periph.c(21): error:  #20: identifier "GPIO_Speed_2MHz" is undefined
+      GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+User\init_periph.c(22): error:  #20: identifier "GPIO_PuPd_UP" is undefined
+      GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+User\init_periph.c(26): error:  #20: identifier "RCC_AHBPeriph_GPIOF" is undefined
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOF, ENABLE);
+User\init_periph.c(28): error:  #20: identifier "GPIO_Pin_5" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+User\init_periph.c(34): error:  #20: identifier "GPIO_Pin_7" is undefined
+      GPIO_SetBits(GPIOF,GPIO_Pin_7);
+User\init_periph.c(37): error:  #20: identifier "RCC_AHBPeriph_GPIOC" is undefined
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);
+User\init_periph.c(39): error:  #20: identifier "GPIO_Pin_10" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12;
+User\init_periph.c(47): error:  #20: identifier "RCC_AHBPeriph_GPIOD" is undefined
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOD, ENABLE);
+User\init_periph.c(49): error:  #20: identifier "GPIO_Pin_2" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+User\init_periph.c(57): error:  #20: identifier "RCC_AHBPeriph_GPIOB" is undefined
+      RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+User\init_periph.c(59): error:  #20: identifier "GPIO_Pin_3" is undefined
+      GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4;
+User\init_periph.c(69): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+        GPIO_InitTypeDef GPIO_InitStruct;
+User\init_periph.c(70): warning:  #223-D: function "RCC_AHBPeriphClockCmd" declared implicitly
+        RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+User\init_periph.c(70): error:  #20: identifier "RCC_AHBPeriph_GPIOA" is undefined
+        RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+User\init_periph.c(71): error:  #20: identifier "GPIO_Pin_0" is undefined
+        GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;
+User\init_periph.c(71): error:  #20: identifier "GPIO_Pin_1" is undefined
+        GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;
+User\init_periph.c(72): error:  #20: identifier "GPIO_Mode_AN" is undefined
+        GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AN;
+User\init_periph.c: 4 warnings, 30 errors
+compiling main.c...
+User\main.c(23): error:  #5: cannot open source input file "mb.h": No such file or directory
+  #include "mb.h"
+User\main.c: 0 warnings, 1 error
+assembling startup_stm32f030.s...
+compiling system_stm32f0xx.c...
+".\Objects\MPP_Logic.axf" - 31 Error(s), 4 Warning(s).
+
+*** Performing Cross-Module-Optimization:
+*** Feedback file '.\Objects\MPP_Logic.fed' not found.
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F0xx_DFP.1.4.0.pack
+                Keil::Device:Startup:1.5.0
+                STMicroelectronics STM32F0 Series Device Support and Examples
+   * Component: Startup Version: 1.5.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\work\repo\MPP_Logic\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+
+   * Component: Keil::Device:Startup:1.5.0
+      Source file:   Device\Source\ARM\startup_stm32f030.s
+      Source file:   Device\Source\system_stm32f0xx.c
+      Source file:   Device\Source\ARM\STM32F0xx_OPT.s
+Target not created.
+</pre>
+</body>
+</html>
