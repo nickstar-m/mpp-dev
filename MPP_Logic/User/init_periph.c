@@ -1,10 +1,10 @@
-#include "stm32f0xx.h"
+#include "stm32f0xx.h"                  // Device header
 
 void GPIO_init (void)
 {
     // Enable GPIO Peripheral clock
-    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
     // Configure pin in output push/pull mode
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_14 | GPIO_Pin_15;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
@@ -67,13 +67,14 @@ void GPIO_init (void)
 void ADC_init (void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct;
+	ADC_InitTypeDef ADC_InitStructure;
+	
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AN;
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-	ADC_InitTypeDef ADC_InitStructure;
 
 	 /* ADC1 DeInit */
 	 //ADC_DeInit(ADC1);

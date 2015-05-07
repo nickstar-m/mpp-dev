@@ -1,9 +1,13 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Wed Apr 01 10:44:33 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Thu May 07 11:36:11 2015
 ;VERSION 0.2
 ;FILE main.o
 GPIO_init <= USED 0
-__asm___6_main_c_7b3262c7____REV16 <= USED 0
-__asm___6_main_c_7b3262c7____REVSH <= USED 0
+TIM6_init <= USED 0
+__asm___6_main_c_06839b19____REV16 <= USED 0
+__asm___6_main_c_06839b19____REVSH <= USED 0
+beep <= USED 0
+display_driver <= USED 0
+kbd_driver <= USED 0
 ;FILE startup_stm32f030.o
 ;FILE stm32f0xx_adc.o
 ADC_AnalogWatchdogCmd <= USED 0

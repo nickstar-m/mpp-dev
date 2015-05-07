@@ -20,10 +20,11 @@
  */
 
 /* ----------------------- Modbus includes ----------------------------------*/
+#include "stm32f0xx.h"   
 #include "mb.h"
 #include "mbport.h"
-#include "stm32f0xx.h"
 #include "init_periph.h"
+
 // include Playing With Fusion MAX31865 libraries
 #include <PlayingWithFusion_MAX31865.h>              // core library
 #include <PlayingWithFusion_MAX31865_STRUCT.h>       // struct library
