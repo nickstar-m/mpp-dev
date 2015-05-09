@@ -1,0 +1,1378 @@
+Dependencies for Project 'MPP_Logic', Target 'STM32F030R8T6': (DO NOT MODIFY !)
+F (.\User\init_periph.c)(0x554B488E)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\init_periph.o --omf_browse .\objects\init_periph.crf --depend .\objects\init_periph.d)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\User\main.c)(0x554B264A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\port\port.h)(0x54A1BB1A)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (User\init_periph.h)(0x54A181B2)
+I (.\MAX31865\PlayingWithFusion_MAX31865.h)(0x54A1760E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (.\MAX31865\PlayingWithFusion_MAX31865_STRUCT.h)(0x54A197E4)
+F (.\User\init_periph.h)(0x54A181B2)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\init_periph_1.o --omf_browse .\objects\init_periph_1.crf --depend .\objects\init_periph_1.d)
+F (.\modbus\mb.c)(0x4C0B9A90)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mb.o --omf_browse .\objects\mb.crf --depend .\objects\mb.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbfunc.h)(0x45789F6A)
+I (.\modbus\rtu\mbrtu.h)(0x45789F6A)
+F (.\modbus\include\mb.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mb_1.o --omf_browse .\objects\mb_1.crf --depend .\objects\mb_1.d)
+F (.\modbus\ascii\mbascii.c)(0x4C0B98CC)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbascii.o --omf_browse .\objects\mbascii.crf --depend .\objects\mbascii.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+I (modbus\ascii\mbascii.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\rtu\mbcrc.h)(0x45789F6A)
+F (.\modbus\ascii\mbascii.h)(0x45789F6A)()
+F (.\modbus\functions\mbfunccoils.c)(0x45D8F394)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfunccoils.o --omf_browse .\objects\mbfunccoils.crf --depend .\objects\mbfunccoils.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+F (.\modbus\functions\mbfuncdiag.c)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncdiag.o --omf_browse .\objects\mbfuncdiag.crf --depend .\objects\mbfuncdiag.d)
+F (.\modbus\functions\mbfuncdisc.c)(0x45D8F3C2)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncdisc.o --omf_browse .\objects\mbfuncdisc.crf --depend .\objects\mbfuncdisc.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+F (.\modbus\functions\mbfuncholding.c)(0x45D8F3D6)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncholding.o --omf_browse .\objects\mbfuncholding.crf --depend .\objects\mbfuncholding.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+F (.\modbus\functions\mbfuncinput.c)(0x46E7AE4C)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncinput.o --omf_browse .\objects\mbfuncinput.crf --depend .\objects\mbfuncinput.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+F (.\modbus\functions\mbfuncother.c)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncother.o --omf_browse .\objects\mbfuncother.crf --depend .\objects\mbfuncother.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+F (.\modbus\functions\mbutils.c)(0x45D8F404)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbutils.o --omf_browse .\objects\mbutils.crf --depend .\objects\mbutils.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+F (.\modbus\include\mbconfig.h)(0x54A12B3E)()
+F (.\modbus\include\mbframe.h)(0x45789F6A)()
+F (.\modbus\include\mbfunc.h)(0x45789F6A)()
+F (.\modbus\include\mbport.h)(0x4C0B9A90)()
+F (.\modbus\include\mbproto.h)(0x45789F6A)()
+F (.\modbus\include\mbutils.h)(0x45789F6A)()
+F (.\modbus\rtu\mbcrc.c)(0x45D8F454)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbcrc.o --omf_browse .\objects\mbcrc.crf --depend .\objects\mbcrc.d)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+F (.\modbus\rtu\mbcrc.h)(0x45789F6A)()
+F (.\modbus\rtu\mbrtu.c)(0x46E7AE4C)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbrtu.o --omf_browse .\objects\mbrtu.crf --depend .\objects\mbrtu.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (modbus\rtu\mbrtu.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+I (modbus\rtu\mbcrc.h)(0x45789F6A)
+F (.\modbus\rtu\mbrtu.h)(0x45789F6A)()
+F (.\modbus\tcp\mbtcp.c)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbtcp.o --omf_browse .\objects\mbtcp.crf --depend .\objects\mbtcp.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+I (.\modbus\include\mbconfig.h)(0x54A12B3E)
+I (modbus\tcp\mbtcp.h)(0x45789F6A)
+I (.\modbus\include\mbframe.h)(0x45789F6A)
+F (.\modbus\tcp\mbtcp.h)(0x45789F6A)()
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_adc.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_adc.o --omf_browse .\objects\stm32f0xx_adc.crf --depend .\objects\stm32f0xx_adc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_can.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_can.o --omf_browse .\objects\stm32f0xx_can.crf --depend .\objects\stm32f0xx_can.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_cec.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_cec.o --omf_browse .\objects\stm32f0xx_cec.crf --depend .\objects\stm32f0xx_cec.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_comp.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_comp.o --omf_browse .\objects\stm32f0xx_comp.crf --depend .\objects\stm32f0xx_comp.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_crc.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_crc.o --omf_browse .\objects\stm32f0xx_crc.crf --depend .\objects\stm32f0xx_crc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_crs.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_crs.o --omf_browse .\objects\stm32f0xx_crs.crf --depend .\objects\stm32f0xx_crs.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_dac.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_dac.o --omf_browse .\objects\stm32f0xx_dac.crf --depend .\objects\stm32f0xx_dac.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_dbgmcu.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_dbgmcu.o --omf_browse .\objects\stm32f0xx_dbgmcu.crf --depend .\objects\stm32f0xx_dbgmcu.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_dma.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_dma.o --omf_browse .\objects\stm32f0xx_dma.crf --depend .\objects\stm32f0xx_dma.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_exti.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_exti.o --omf_browse .\objects\stm32f0xx_exti.crf --depend .\objects\stm32f0xx_exti.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_flash.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_flash.o --omf_browse .\objects\stm32f0xx_flash.crf --depend .\objects\stm32f0xx_flash.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_gpio.o --omf_browse .\objects\stm32f0xx_gpio.crf --depend .\objects\stm32f0xx_gpio.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_i2c.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_i2c.o --omf_browse .\objects\stm32f0xx_i2c.crf --depend .\objects\stm32f0xx_i2c.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_iwdg.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_iwdg.o --omf_browse .\objects\stm32f0xx_iwdg.crf --depend .\objects\stm32f0xx_iwdg.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_misc.o --omf_browse .\objects\stm32f0xx_misc.crf --depend .\objects\stm32f0xx_misc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_pwr.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_pwr.o --omf_browse .\objects\stm32f0xx_pwr.crf --depend .\objects\stm32f0xx_pwr.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_rcc.o --omf_browse .\objects\stm32f0xx_rcc.crf --depend .\objects\stm32f0xx_rcc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rtc.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_rtc.o --omf_browse .\objects\stm32f0xx_rtc.crf --depend .\objects\stm32f0xx_rtc.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_spi.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_spi.o --omf_browse .\objects\stm32f0xx_spi.crf --depend .\objects\stm32f0xx_spi.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_syscfg.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_syscfg.o --omf_browse .\objects\stm32f0xx_syscfg.crf --depend .\objects\stm32f0xx_syscfg.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_tim.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_tim.o --omf_browse .\objects\stm32f0xx_tim.crf --depend .\objects\stm32f0xx_tim.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_usart.o --omf_browse .\objects\stm32f0xx_usart.crf --depend .\objects\stm32f0xx_usart.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_wwdg.c)(0x551909DF)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_wwdg.o --omf_browse .\objects\stm32f0xx_wwdg.crf --depend .\objects\stm32f0xx_wwdg.d)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+F (.\include\stm32f0xx_conf.h)(0x549C7FDC)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_conf.o --omf_browse .\objects\stm32f0xx_conf.crf --depend .\objects\stm32f0xx_conf.d)
+F (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx.o --omf_browse .\objects\stm32f0xx.crf --depend .\objects\stm32f0xx.d)
+F (.\port\port.h)(0x54A1BB1A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+F (.\port\portevent.c)(0x44679926)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\portevent.o --omf_browse .\objects\portevent.crf --depend .\objects\portevent.d)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+F (.\port\portserial.c)(0x54AAFFE8)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\portserial.o --omf_browse .\objects\portserial.crf --depend .\objects\portserial.d)
+I (port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+F (.\port\porttimer.c)(0x54AAFFE8)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\porttimer.o --omf_browse .\objects\porttimer.crf --depend .\objects\porttimer.d)
+I (port\port.h)(0x54A1BB1A)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
+I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
+I (.\modbus\include\mb.h)(0x45789F6A)
+I (.\modbus\include\mbport.h)(0x4C0B9A90)
+I (.\modbus\include\mbproto.h)(0x45789F6A)
+F (RTE\Device\STM32F030R8\startup_stm32f030.s)(0x548EED7E)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "STM32F030 SETA 1"--list .\listings\startup_stm32f030.lst --xref -o .\objects\startup_stm32f030.o --depend .\objects\startup_stm32f030.d)
+F (RTE\Device\STM32F030R8\system_stm32f0xx.c)(0x548EED7E)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\system_stm32f0xx_1.o --omf_browse .\objects\system_stm32f0xx_1.crf --depend .\objects\system_stm32f0xx_1.d)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FF38FA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FF38FA)
+I (.\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x551909DE)
+I (.\STM32F0xx_StdPeriph_Driver\stm32f0xx_conf.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_adc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_can.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_cec.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_crs.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_comp.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dac.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dbgmcu.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_dma.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_exti.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_flash.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_gpio.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_syscfg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_i2c.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_iwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_pwr.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rcc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_rtc.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_spi.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
+I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
