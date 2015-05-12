@@ -27,7 +27,7 @@
 
 // include Playing With Fusion MAX31865 libraries
 #include <PlayingWithFusion_MAX31865.h>              // core library
-#include <PlayingWithFusion_MAX31865_STRUCT.h>       // struct library
+//#include <PlayingWithFusion_MAX31865_STRUCT.h>       // struct library
 /* ----------------------- Defines ------------------------------------------*/
 #define REG_INPUT_START 1000
 #define REG_INPUT_NREGS 4
@@ -61,7 +61,7 @@ main( void )
     if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_11)) adress=adress+1;
     if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_12)) adress=adress+2;
     if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_13)) adress=adress+4;
-    adress=adress+32;
+    adress = adress + 32;
 
     eStatus = eMBInit( MB_RTU, adress, 0, 57600, MB_PAR_EVEN );
 

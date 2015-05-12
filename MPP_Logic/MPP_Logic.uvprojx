@@ -359,7 +359,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
@@ -420,7 +420,7 @@
             </File>
             <File>
               <FileName>init_periph.h</FileName>
-              <FileType>1</FileType>
+              <FileType>5</FileType>
               <FilePath>.\User\init_periph.h</FilePath>
             </File>
           </Files>
@@ -435,7 +435,7 @@
             </File>
             <File>
               <FileName>mb.h</FileName>
-              <FileType>1</FileType>
+              <FileType>5</FileType>
               <FilePath>.\modbus\include\mb.h</FilePath>
             </File>
             <File>
@@ -665,12 +665,12 @@
             </File>
             <File>
               <FileName>stm32f0xx_conf.h</FileName>
-              <FileType>1</FileType>
+              <FileType>5</FileType>
               <FilePath>.\include\stm32f0xx_conf.h</FilePath>
             </File>
             <File>
               <FileName>stm32f0xx.h</FileName>
-              <FileType>1</FileType>
+              <FileType>5</FileType>
               <FilePath>.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h</FilePath>
             </File>
           </Files>
@@ -680,7 +680,7 @@
           <Files>
             <File>
               <FileName>port.h</FileName>
-              <FileType>1</FileType>
+              <FileType>5</FileType>
               <FilePath>.\port\port.h</FilePath>
             </File>
             <File>
@@ -697,6 +697,26 @@
               <FileName>porttimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\port\porttimer.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MAX31865</GroupName>
+          <Files>
+            <File>
+              <FileName>PlayingWithFusion_MAX31865.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MAX31865\PlayingWithFusion_MAX31865.c</FilePath>
+            </File>
+            <File>
+              <FileName>PlayingWithFusion_MAX31865.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MAX31865\PlayingWithFusion_MAX31865.h</FilePath>
+            </File>
+            <File>
+              <FileName>PlayingWithFusion_MAX31865_STRUCT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MAX31865\PlayingWithFusion_MAX31865_STRUCT.h</FilePath>
             </File>
           </Files>
         </Group>

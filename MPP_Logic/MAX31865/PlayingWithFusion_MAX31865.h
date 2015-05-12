@@ -45,8 +45,6 @@
 #include "stdlib.h"
 #include "PlayingWithFusion_MAX31865_STRUCT.h"
 
-  int8_t _cs;
-
   void PWFusion_MAX31865_RTD(int8_t CSx);
   void MAX31865_config(void);
   void MAX31865_full_read(struct var_max31865 *rtd_ptr);

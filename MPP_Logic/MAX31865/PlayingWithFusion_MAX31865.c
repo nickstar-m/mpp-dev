@@ -52,6 +52,8 @@
 #define HIGH 1
 #define LOW 0
 
+int8_t _cs;
+	
 void digitalWrite(unsigned char device, unsigned char level)
 {
 	switch (device)
