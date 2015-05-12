@@ -27,7 +27,7 @@
 
 // include Playing With Fusion MAX31865 libraries
 #include <PlayingWithFusion_MAX31865.h>              // core library
-//#include <PlayingWithFusion_MAX31865_STRUCT.h>       // struct library
+
 /* ----------------------- Defines ------------------------------------------*/
 #define REG_INPUT_START 1000
 #define REG_INPUT_NREGS 4
@@ -42,7 +42,8 @@ static struct var_max31865 RTD_CH1;
 /* ----------------------- Start implementation -----------------------------*/
 int
 main( void )
-{	UCHAR adress=0;
+{	  
+	  UCHAR adress=0;
     const UCHAR     ucSlaveID[] = {"MPP_Logic_V10"};
     eMBErrorCode    eStatus;
     __disable_irq ();
@@ -125,14 +126,12 @@ eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
 		MAX31865_full_read(&RTD_CH1);
 		iRegIndex=(short)(((double)RTD_CH1.rtd_res_raw / 32) - 256);
 		break;
-		}
-	    *pucRegBuffer++ =
-                ( unsigned char )( iRegIndex >> 8 );
-            *pucRegBuffer++ =
-                ( unsigned char )( iRegIndex & 0xFF );
-         usNRegs--;
-	 usAddress++;
-        }
+		  }
+	    *pucRegBuffer++ = ( unsigned char )( iRegIndex >> 8 );
+      *pucRegBuffer++ = ( unsigned char )( iRegIndex & 0xFF );
+      usNRegs--;
+	    usAddress++;
+	  }  
     }
     else
     {
@@ -149,60 +148,53 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
 
 	if ((usAddress >= 2000) && (usAddress <= 2007) && ((usAddress+usNRegs-1)<=2007) && (eMode == MB_REG_WRITE))
 	{
-        while( usNRegs > 0 )
-        {
-	temp=0;
-	temp=*pucRegBuffer * 256;
-	pucRegBuffer++;
-	temp=temp + *pucRegBuffer;
-	pucRegBuffer++;
+    while( usNRegs > 0 )
+    {
+			temp=0;
+			temp=*pucRegBuffer * 256;
+			pucRegBuffer++;
+			temp=temp + *pucRegBuffer;
+			pucRegBuffer++;
 
-	switch (usAddress){
+			switch (usAddress){
 
-	case 2000:
-	if (temp) GPIO_SetBits(GPIOA,GPIO_Pin_14); else GPIO_ResetBits(GPIOA,GPIO_Pin_14);
-	break;
+				case 2000:
+				if (temp) GPIO_SetBits(GPIOA,GPIO_Pin_14); else GPIO_ResetBits(GPIOA,GPIO_Pin_14);
+				break;
 
-	case 2001:
-	if (temp) GPIO_SetBits(GPIOA,GPIO_Pin_15); else GPIO_ResetBits(GPIOA,GPIO_Pin_15);
-	break;
+				case 2001:
+				if (temp) GPIO_SetBits(GPIOA,GPIO_Pin_15); else GPIO_ResetBits(GPIOA,GPIO_Pin_15);
+				break;
 
-	case 2002:
-	if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_10); else GPIO_ResetBits(GPIOC,GPIO_Pin_10);
-	break;
+				case 2002:
+				if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_10); else GPIO_ResetBits(GPIOC,GPIO_Pin_10);
+				break;
 
-	case 2003:
-	if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_11); else GPIO_ResetBits(GPIOC,GPIO_Pin_11);
-	break;
+				case 2003:
+				if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_11); else GPIO_ResetBits(GPIOC,GPIO_Pin_11);
+				break;
 
-	case 2004:
-	if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_12); else GPIO_ResetBits(GPIOC,GPIO_Pin_12);
-	break;
+				case 2004:
+				if (temp) GPIO_SetBits(GPIOC,GPIO_Pin_12); else GPIO_ResetBits(GPIOC,GPIO_Pin_12);
+				break;
 
-	case 2005:
-	if (temp) GPIO_SetBits(GPIOD,GPIO_Pin_2); else GPIO_ResetBits(GPIOD,GPIO_Pin_2);
-	break;
+				case 2005:
+				if (temp) GPIO_SetBits(GPIOD,GPIO_Pin_2); else GPIO_ResetBits(GPIOD,GPIO_Pin_2);
+				break;
 
-	case 2006:
-	if (temp) GPIO_SetBits(GPIOB,GPIO_Pin_3); else GPIO_ResetBits(GPIOB,GPIO_Pin_3);
-	break;
+				case 2006:
+				if (temp) GPIO_SetBits(GPIOB,GPIO_Pin_3); else GPIO_ResetBits(GPIOB,GPIO_Pin_3);
+				break;
 
-	case 2007:
-	if (temp) GPIO_SetBits(GPIOB,GPIO_Pin_4); else GPIO_ResetBits(GPIOB,GPIO_Pin_4);
-	break;
-/*
-	case 2008:
-	if (!temp) GPIO_SetBits(GPIOF,GPIO_Pin_5); else GPIO_ResetBits(GPIOF,GPIO_Pin_5);
-	break;
+				case 2007:
+				if (temp) GPIO_SetBits(GPIOB,GPIO_Pin_4); else GPIO_ResetBits(GPIOB,GPIO_Pin_4);
+				break;
 
-	case 2009:
-	if (!temp) GPIO_SetBits(GPIOA,GPIO_Pin_4); else GPIO_ResetBits(GPIOB,GPIO_Pin_4);
-	break;*/
-	}
+			}
 
-        usNRegs--;
+      usNRegs--;
 	    usAddress++;
-        }
+    }
     return MB_ENOERR;
 	}
 
