@@ -32,25 +32,27 @@
 
 void
 vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
-{	if(TRUE==xRxEnable)
-{
-	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-}
-else
-{
-	USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
-}
+{	
+	if(TRUE==xRxEnable)
+  {
+		USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+  }
+  else
+  {
+	  USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
+  }
 
-if(TRUE==xTxEnable)
-{
-	USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
-	RTS_LOW;
-}
-else
-{
-   USART_ITConfig(USART1, USART_IT_TXE, DISABLE);
-	RTS_HIGH;
-}
+  if(TRUE==xTxEnable)
+  {
+	  USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
+		RTS_LOW;
+  }
+  else
+  {
+    USART_ITConfig(USART1, USART_IT_TXE, DISABLE);
+	  while (ITStatus(USART1, )USART_GetITStatus(USART1, USART_FLAG_TC) == RESET && USART_GetITStatus(USART1, USART_FLAG_TXE));
+		RTS_HIGH;
+  }
 }
 
 BOOL

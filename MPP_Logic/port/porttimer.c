@@ -56,10 +56,10 @@ xMBPortTimersInit( USHORT usTim1Timerout50us )
 inline void
 vMBPortTimersEnable(  )
 {
-TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
-TIM_SetCounter(TIM3,0x0000);
-TIM_Cmd(TIM3, ENABLE);
+  TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+  TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
+  TIM_SetCounter(TIM3,0x0000);
+  TIM_Cmd(TIM3, ENABLE);
 }
 
 inline void
@@ -72,11 +72,13 @@ vMBPortTimersDisable(  )
 }
 
 
-void TIM3_IRQHandler (void){
+void
+TIM3_IRQHandler( )
+{
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) == SET)
 	{
-	TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-	pxMBPortCBTimerExpired(  );
-	GPIO_SetBits(GPIOA,GPIO_Pin_4);
+	  TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+	  pxMBPortCBTimerExpired(  );
+	  GPIO_SetBits(GPIOA,GPIO_Pin_4);
 	}
-	}
+}

@@ -73,13 +73,13 @@ GPIO_SetBits(GPIOA,GPIO_Pin_8); \
     } while( 0 );
 
 #define RTS_HIGH        \
-    do { \
-    	GPIO_ResetBits(GPIOA,GPIO_Pin_8); \
+		do { \
+			GPIO_ResetBits(GPIOA, GPIO_Pin_8); \
     } while( 0 );
 
 #define RTS_LOW         \
     do { \
-    	GPIO_SetBits(GPIOA,GPIO_Pin_8); \
+    	GPIO_SetBits(GPIOA, GPIO_Pin_8); \
     } while( 0 );
 
 #endif
