@@ -1,6 +1,6 @@
 #include "stm32f0xx.h"                  // Device header
 
-void GPIO_init (void)
+void GPIO_init(void)
 {
     // Enable GPIO Peripheral clock
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -64,7 +64,7 @@ void GPIO_init (void)
     GPIO_Init(GPIOB, &GPIO_InitStructure);
 }
 
-void ADC_init (void)
+void ADC_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct;
 	ADC_InitTypeDef ADC_InitStructure;
@@ -101,7 +101,7 @@ void ADC_init (void)
 
 }
 
-void SPI_init (void)
+void SPI_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	SPI_InitTypeDef SPI_InitStructure;
@@ -144,3 +144,4 @@ void SPI_init (void)
 	SPI_Cmd(SPI1, ENABLE); // Включаем модуль SPI1....
 
 }
+
