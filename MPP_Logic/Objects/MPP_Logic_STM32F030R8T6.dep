@@ -30,7 +30,7 @@ I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_tim.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
-F (.\User\main.c)(0x55533C22)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\User\main.c)(0x555478AC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -62,7 +62,7 @@ I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
 I (.\modbus\include\mb.h)(0x45789F6A)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
 I (.\modbus\include\mbport.h)(0x4C0B9A90)
 I (.\modbus\include\mbproto.h)(0x45789F6A)
@@ -74,7 +74,7 @@ F (.\User\init_periph.h)(0x5551AB6C)()
 F (.\modbus\mb.c)(0x55533C8A)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mb.o --omf_browse .\objects\mb.crf --depend .\objects\mb.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -117,7 +117,7 @@ F (.\modbus\include\mb.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime 
 F (.\modbus\ascii\mbascii.c)(0x4C0B98CC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbascii.o --omf_browse .\objects\mbascii.crf --depend .\objects\mbascii.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -160,7 +160,7 @@ F (.\modbus\ascii\mbascii.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Oti
 F (.\modbus\functions\mbfunccoils.c)(0x45D8F394)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfunccoils.o --omf_browse .\objects\mbfunccoils.crf --depend .\objects\mbfunccoils.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -201,7 +201,7 @@ F (.\modbus\functions\mbfuncdiag.c)(0x45789F6A)(--c99 -c --cpu Cortex-M0 -D__EVA
 F (.\modbus\functions\mbfuncdisc.c)(0x45D8F3C2)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncdisc.o --omf_browse .\objects\mbfuncdisc.crf --depend .\objects\mbfuncdisc.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -241,7 +241,7 @@ I (.\modbus\include\mbconfig.h)(0x54A12B3E)
 F (.\modbus\functions\mbfuncholding.c)(0x45D8F3D6)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncholding.o --omf_browse .\objects\mbfuncholding.crf --depend .\objects\mbfuncholding.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -281,7 +281,7 @@ I (.\modbus\include\mbconfig.h)(0x54A12B3E)
 F (.\modbus\functions\mbfuncinput.c)(0x46E7AE4C)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncinput.o --omf_browse .\objects\mbfuncinput.crf --depend .\objects\mbfuncinput.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -321,7 +321,7 @@ I (.\modbus\include\mbconfig.h)(0x54A12B3E)
 F (.\modbus\functions\mbfuncother.c)(0x45789F6A)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbfuncother.o --omf_browse .\objects\mbfuncother.crf --depend .\objects\mbfuncother.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -361,7 +361,7 @@ I (.\modbus\include\mbconfig.h)(0x54A12B3E)
 F (.\modbus\functions\mbutils.c)(0x45D8F404)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbutils.o --omf_browse .\objects\mbutils.crf --depend .\objects\mbutils.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -403,7 +403,7 @@ F (.\modbus\include\mbport.h)(0x4C0B9A90)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Ot
 F (.\modbus\include\mbproto.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbproto.o --omf_browse .\objects\mbproto.crf --depend .\objects\mbproto.d)
 F (.\modbus\include\mbutils.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbutils_1.o --omf_browse .\objects\mbutils_1.crf --depend .\objects\mbutils_1.d)
 F (.\modbus\rtu\mbcrc.c)(0x45D8F454)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbcrc.o --omf_browse .\objects\mbcrc.crf --depend .\objects\mbcrc.d)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -436,10 +436,10 @@ I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
 F (.\modbus\rtu\mbcrc.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbcrc_1.o --omf_browse .\objects\mbcrc_1.crf --depend .\objects\mbcrc_1.d)
-F (.\modbus\rtu\mbrtu.c)(0x46E7AE4C)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbrtu.o --omf_browse .\objects\mbrtu.crf --depend .\objects\mbrtu.d)
+F (.\modbus\rtu\mbrtu.c)(0x555466B7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbrtu.o --omf_browse .\objects\mbrtu.crf --depend .\objects\mbrtu.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -481,7 +481,7 @@ F (.\modbus\rtu\mbrtu.h)(0x45789F6A)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime -
 F (.\modbus\tcp\mbtcp.c)(0x45789F6A)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\mbtcp.o --omf_browse .\objects\mbtcp.crf --depend .\objects\mbtcp.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x54764760)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x54764760)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -1235,10 +1235,10 @@ I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h)(0x551909DF)
 I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
 F (.\include\stm32f0xx_conf.h)(0x549C7FDC)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx_conf.o --omf_browse .\objects\stm32f0xx_conf.crf --depend .\objects\stm32f0xx_conf.d)
 F (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\stm32f0xx.o --omf_browse .\objects\stm32f0xx.crf --depend .\objects\stm32f0xx.d)
-F (.\port\port.h)(0x555368C6)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+F (.\port\port.h)(0x555466B7)(-c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
 F (.\port\portevent.c)(0x44679926)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\portevent.o --omf_browse .\objects\portevent.crf --depend .\objects\portevent.d)
 I (.\modbus\include\mb.h)(0x45789F6A)
-I (.\port\port.h)(0x555368C6)
+I (.\port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -1272,8 +1272,8 @@ I (.\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h)(0x551909DF)
 I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x54764760)
 I (.\modbus\include\mbport.h)(0x4C0B9A90)
 I (.\modbus\include\mbproto.h)(0x45789F6A)
-F (.\port\portserial.c)(0x555368C2)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\portserial.o --omf_browse .\objects\portserial.crf --depend .\objects\portserial.d)
-I (port\port.h)(0x555368C6)
+F (.\port\portserial.c)(0x555466B7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\portserial.o --omf_browse .\objects\portserial.crf --depend .\objects\portserial.d)
+I (port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
@@ -1309,7 +1309,7 @@ I (.\modbus\include\mb.h)(0x45789F6A)
 I (.\modbus\include\mbport.h)(0x4C0B9A90)
 I (.\modbus\include\mbproto.h)(0x45789F6A)
 F (.\port\porttimer.c)(0x555348E7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu-I D:\work\repo\MPP_Logic\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030-o .\objects\porttimer.o --omf_browse .\objects\porttimer.crf --depend .\objects\porttimer.d)
-I (port\port.h)(0x555368C6)
+I (port\port.h)(0x555466B7)
 I (.\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x551909DE)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FC782A)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54764760)
