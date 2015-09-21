@@ -408,11 +408,11 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\objects\startup_stm32f030.d -o.\objects\startup_stm32f030.o -ID:
-\MPP-dev\MPP_Logic\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:
-\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include --predefine="__UVISIO
-N_VERSION SETA 514" --predefine="_RTE_ SETA 1" --predefine="STM32F030 SETA 1" -
--list=.\listings\startup_stm32f030.lst RTE\Device\STM32F030R8\startup_stm32f030
-.s
+\work\repo\MPP_Logic\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -I
+C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include --predefine="__EVAL
+ SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefine="_RTE_ SETA 1" --
+predefine="STM32F030 SETA 1" --list=.\listings\startup_stm32f030.lst RTE\Device
+\STM32F030R8\startup_stm32f030.s
 
 
 
@@ -922,4 +922,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-387 symbols in table
+388 symbols in table

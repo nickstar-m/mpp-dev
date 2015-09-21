@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\STM32F0xx_StdPeriph_Driver -I.\port -I.\MAX31865 -I.\modbus\include -I.\modbus -I.\modbus\rtu -I.\include
+-I D:\work\repo\MPP_Logic\RTE
+-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include
+-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030
+-o .\objects\stm32f0xx_pwr.o --omf_browse .\objects\stm32f0xx_pwr.crf --depend .\objects\stm32f0xx_pwr.d --feedback ".\Objects\MPP_Logic.fed" "STM32F0xx_StdPeriph_Driver\src\stm32f0xx_pwr.c"
