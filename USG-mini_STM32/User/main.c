@@ -1,76 +1,86 @@
-#include "stm32f0xx.h"                  // Device header
+/**************************************************************************//**
+ * @file     main.c
+ * @brief    USG-mini generator main board firmware
+ * @version  V1.00
+ * @date     21. September 2015
+ * @author   Nickstar
+ *
+ * @note
+ *
+ ******************************************************************************/
+/* Copyright (c) 2015 MedPromPrylad
 
-uint8_t display_buffer[6] = {255};
+   ---------------------------------------------------------------------------*/
 
-// GPIO init proc
-void GPIO_init (void)
+// ---------------------------------------------------------------------------
+// Basic definitions
+// ---------------------------------------------------------------------------
+#define  INTERFACE_TYPE   TERMINAL
+                          //TERMINAL
+													//I2C 
+													//NONE
+
+// ---------------------------------------------------------------------------
+// Includes
+// ---------------------------------------------------------------------------
+#include "main.h"
+
+// ---------------------------------------------------------------------------
+// Global variables
+// ---------------------------------------------------------------------------
+#if (INTERFACE_TYPE == TERMINAL)
+  char TX_buffer[128];
+  char RX_buffer[64];
+#endif
+
+// Additional global variables
+uint16_t delay_count = 0;
+
+// ---------------------------------------------------------------------------
+// Interrupt handlers
+// ---------------------------------------------------------------------------
+void SysTick_Handler (void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure;
+  if (delay_count > 0) {delay_count--;} 
+}
 	
-	// Enable GPIO Peripheral clock
-  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
-	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
-	
-	// Configure pin in output push/pull mode
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_14 | GPIO_Pin_15;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
-
- 	// Configure pin in output push/pull mode
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 ;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
+// ---------------------------------------------------------------------------
+// Utilites
+// ---------------------------------------------------------------------------
+void Delay_ms (uint16_t delay)
+{
+	delay_count = delay;
+	while (delay_count){};
 }
 
-// Timer TIM6 init proc
-void TIM6_init(void)
-{
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6, ENABLE);
-
-}
-
-// Display & keyboard handler
-// based on timer TIM4
-// Display driver
-void display_driver()
-{
+// ---------------------------------------------------------------------------
+// Main()
+// ---------------------------------------------------------------------------
+int main(void){
+	int i;	
 	
-}	
-
-
-// Keyboard driver
-void kbd_driver()
-{
-
-}
-
-// Beep function
-// frequency in Hz, duration in msec
-void beep(uint32_t frequency, uint32_t duration)
-{
+	// ---------------------------------------------------------------------------
+  // Init section
+  // ---------------------------------------------------------------------------
+	SysTick_Config(SystemCoreClock / 1000); // 1 ms
 	
-}	
-
-int main(void)
-{
-	uint32_t i;
 	GPIO_init();
-	GPIO_ResetBits(GPIOA,GPIO_Pin_0);
-	GPIO_SetBits(GPIOA,GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7);
-  GPIO_ResetBits(GPIOA,GPIO_Pin_14 | GPIO_Pin_15);
-	GPIO_ResetBits(GPIOB,GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7);
-	
-	while (1)
-	{
-	  for (i=1;i<2000000;i++){};
-		GPIO_ResetBits(GPIOA, GPIO_Pin_14 | GPIO_Pin_15);
-	  for (i=1;i<2000000;i++){};
-		GPIO_SetBits(GPIOA, GPIO_Pin_14 | GPIO_Pin_15);
+	USART_init_();
+  //DMA_USART_TX_init();
+  
+	// Main loop
+	while(1){
+		
+		//Delay_ms(250);
+		GPIO_SetBits(GPIOA, GPIO_Pin_0);
+		
+		for (i=0;i<1000000;i++);
+		
+		USART_SendData(USART1, 0xAA);
+		
+		GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+		//Delay_ms(250);
+		for (i=0;i<1000000;i++);
+		USART_SendData(USART1, 0x55);
 	}
 }

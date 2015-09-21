@@ -1,13 +1,14 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Thu May 07 11:36:11 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Mon Sep 21 21:40:05 2015
 ;VERSION 0.2
 ;FILE main.o
-GPIO_init <= USED 0
-TIM6_init <= USED 0
-__asm___6_main_c_06839b19____REV16 <= USED 0
-__asm___6_main_c_06839b19____REVSH <= USED 0
-beep <= USED 0
-display_driver <= USED 0
-kbd_driver <= USED 0
+Delay_ms <= USED 0
+__asm___6_main_c_dd81d552____REV16 <= USED 0
+__asm___6_main_c_dd81d552____REVSH <= USED 0
+;FILE periph_init.o
+DMA_USART_RX_init <= USED 0
+DMA_USART_TX_init <= USED 0
+__asm___13_periph_init_c_7b3262c7____REV16 <= USED 0
+__asm___13_periph_init_c_7b3262c7____REVSH <= USED 0
 ;FILE startup_stm32f030.o
 ;FILE stm32f0xx_adc.o
 ADC_AnalogWatchdogCmd <= USED 0
@@ -228,7 +229,6 @@ __asm___17_stm32f0xx_flash_c_a2a150d6____REV16 <= USED 0
 __asm___17_stm32f0xx_flash_c_a2a150d6____REVSH <= USED 0
 ;FILE stm32f0xx_gpio.o
 GPIO_DeInit <= USED 0
-GPIO_PinAFConfig <= USED 0
 GPIO_PinLockConfig <= USED 0
 GPIO_ReadInputData <= USED 0
 GPIO_ReadInputDataBit <= USED 0
@@ -318,7 +318,6 @@ RCC_ADCCLKConfig <= USED 0
 RCC_AHBPeriphResetCmd <= USED 0
 RCC_APB1PeriphClockCmd <= USED 0
 RCC_APB1PeriphResetCmd <= USED 0
-RCC_APB2PeriphClockCmd <= USED 0
 RCC_APB2PeriphResetCmd <= USED 0
 RCC_AdjustHSI14CalibrationValue <= USED 0
 RCC_AdjustHSICalibrationValue <= USED 0
@@ -328,7 +327,6 @@ RCC_ClearFlag <= USED 0
 RCC_ClearITPendingBit <= USED 0
 RCC_ClockSecuritySystemCmd <= USED 0
 RCC_DeInit <= USED 0
-RCC_GetClocksFreq <= USED 0
 RCC_GetFlagStatus <= USED 0
 RCC_GetITStatus <= USED 0
 RCC_GetSYSCLKSource <= USED 0
@@ -557,7 +555,6 @@ USART_ClearFlag <= USED 0
 USART_ClearITPendingBit <= USED 0
 USART_ClockInit <= USED 0
 USART_ClockStructInit <= USED 0
-USART_Cmd <= USED 0
 USART_DECmd <= USED 0
 USART_DEPolarityConfig <= USED 0
 USART_DMACmd <= USED 0
@@ -569,7 +566,6 @@ USART_GetFlagStatus <= USED 0
 USART_GetITStatus <= USED 0
 USART_HalfDuplexCmd <= USED 0
 USART_ITConfig <= USED 0
-USART_Init <= USED 0
 USART_InvPinCmd <= USED 0
 USART_IrDACmd <= USED 0
 USART_IrDAConfig <= USED 0
@@ -586,7 +582,6 @@ USART_ReceiverTimeOutCmd <= USED 0
 USART_RequestCmd <= USED 0
 USART_STOPModeCmd <= USED 0
 USART_SWAPPinCmd <= USED 0
-USART_SendData <= USED 0
 USART_SetAddress <= USED 0
 USART_SetAutoRetryCount <= USED 0
 USART_SetBlockLength <= USED 0

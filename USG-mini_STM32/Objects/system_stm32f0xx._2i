@@ -3,4 +3,4 @@
 -I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
 -I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include
 -D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030
--o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d --feedback ".\Objects\USG-mini.fed" "RTE\Device\STM32F030K6\system_stm32f0xx.c"
+-o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d --feedback ".\Objects\USG-mini.fed" "RTE\Device\STM32F030F4\system_stm32f0xx.c"

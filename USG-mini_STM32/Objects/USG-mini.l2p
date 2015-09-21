@@ -1,5 +1,6 @@
 --cpu Cortex-M0
 ".\objects\main.o"
+".\objects\periph_init.o"
 ".\objects\stm32f0xx_adc.o"
 ".\objects\stm32f0xx_can.o"
 ".\objects\stm32f0xx_cec.o"

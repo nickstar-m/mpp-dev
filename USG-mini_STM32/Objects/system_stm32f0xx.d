@@ -1,4 +1,4 @@
-.\objects\system_stm32f0xx.o: RTE\Device\STM32F030K6\system_stm32f0xx.c
+.\objects\system_stm32f0xx.o: RTE\Device\STM32F030F4\system_stm32f0xx.c
 .\objects\system_stm32f0xx.o: .\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h
 .\objects\system_stm32f0xx.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h
 .\objects\system_stm32f0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h

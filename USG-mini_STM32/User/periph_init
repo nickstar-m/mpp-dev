@@ -1,0 +1,106 @@
+/**************************************************************************//**
+ * @file     periph_init.c
+ * @brief    USG-mini generator main board firmware
+ * @version  V1.00
+ * @date     21. September 2015
+ * @author   Nickstar
+ *
+ * @note
+ *
+ ******************************************************************************/
+/* Copyright (c) 2015 MedPromPrylad
+
+   ---------------------------------------------------------------------------*/
+	 
+#include "periph_init.h"                // Init header
+#include "stm32f0xx.h"                  // Device header
+
+// ---------------------------------------------------
+// GPIO init proc
+// ---------------------------------------------------
+void GPIO_init (void)
+{
+  GPIO_InitTypeDef GPIO_InitStructure;
+	
+	// Enable GPIO Peripheral clock
+  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+	
+	// Configure pin in output push/pull mode
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_14 | GPIO_Pin_15;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
+  GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+ 	// Configure pin in output push/pull mode
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 ;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
+  GPIO_Init(GPIOB, &GPIO_InitStructure);
+}
+
+// ---------------------------------------------------
+// USART init proc
+// ---------------------------------------------------
+
+// ---------------------------------------------------
+// I2C init proc
+// ---------------------------------------------------
+
+// ---------------------------------------------------
+// DMA init proc
+// ---------------------------------------------------
+#if (INTERFACE_TYPE == TERMINAL)
+	void DMA_USART_TX_init(void){
+		DMA_InitTypeDef DMA_init_USART;
+		
+		DMA_init_USART.DMA_PeripheralBaseAddr = (uint32_t)&USART1->TDR;
+		DMA_init_USART.DMA_MemoryBaseAddr     = (uint32_t)TX_buffer;
+
+		DMA_init_USART.DMA_DIR;                /*!< Specifies if the peripheral is the source or destination.
+																					This parameter can be a value of @ref DMA_data_transfer_direction     */
+
+		DMA_init_USART.DMA_BufferSize;         /*!< Specifies the buffer size, in data unit, of the specified Channel. 
+																					The data unit is equal to the configuration set in DMA_PeripheralDataSize
+																					or DMA_MemoryDataSize members depending in the transfer direction     */
+
+		DMA_init_USART.DMA_PeripheralInc;      /*!< Specifies whether the Peripheral address register is incremented or not.
+																					This parameter can be a value of @ref DMA_peripheral_incremented_mode */
+
+		DMA_init_USART.DMA_MemoryInc;          /*!< Specifies whether the memory address register is incremented or not.
+																					This parameter can be a value of @ref DMA_memory_incremented_mode     */
+
+		DMA_init_USART.DMA_PeripheralDataSize; /*!< Specifies the Peripheral data width.
+																					This parameter can be a value of @ref DMA_peripheral_data_size        */
+
+		DMA_init_USART.DMA_MemoryDataSize;     /*!< Specifies the Memory data width.
+																					This parameter can be a value of @ref DMA_memory_data_size            */
+
+		DMA_init_USART.DMA_Mode;               /*!< Specifies the operation mode of the DMAy Channelx.
+																					This parameter can be a value of @ref DMA_circular_normal_mode
+																					@note: The circular buffer mode cannot be used if the memory-to-memory
+																								data transfer is configured on the selected Channel */
+
+		DMA_init_USART.DMA_Priority;           /*!< Specifies the software priority for the DMAy Channelx.
+																					This parameter can be a value of @ref DMA_priority_level              */
+
+		DMA_init_USART.DMA_M2M;                /*!< Specifies if the DMAy Channelx will be used in memory-to-memory transfer.
+																					This parameter can be a value of @ref DMA_memory_to_memory            */
+	}
+#endif
+	
+// ---------------------------------------------------
+// RTC init proc
+// ---------------------------------------------------
+
+// ---------------------------------------------------
+// TIMER init proc
+// ---------------------------------------------------
+
+// ---------------------------------------------------
+// IRQ init proc
+// ---------------------------------------------------

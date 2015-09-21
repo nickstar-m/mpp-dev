@@ -230,6 +230,7 @@ void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx)
   *         the configuration information for the specified DMA Channel.
   * @retval None
   */
+#include "stm32f0xx.h"                  // Device header
 void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct)
 {
   uint32_t tmpreg = 0;
