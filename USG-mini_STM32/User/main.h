@@ -16,4 +16,5 @@
 #include "global.h"
 #include "periph_init.h"
 	
+#include <stdio.h>
 void Delay_ms (uint16_t delay);

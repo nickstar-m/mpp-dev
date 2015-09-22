@@ -17,10 +17,11 @@
 
 	#include "stm32f0xx.h"
 	#include "global.h"
-
 	
 	void GPIO_init (void);
 	void USART_init_ (void);
   void DMA_USART_TX_init (void);
+	void ADC_init (void);
+	void RTC_init (void);
   
 #endif

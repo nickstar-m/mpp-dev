@@ -34,3 +34,4 @@
 .\objects\main.o: User\global.h
 .\objects\main.o: User\periph_init.h
 .\objects\main.o: User\global.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
