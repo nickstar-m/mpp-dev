@@ -97,9 +97,9 @@ void GPIO_init (void)
 		RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 		
 		DMA_init_USART_struct.DMA_PeripheralBaseAddr = (uint32_t)&USART1->TDR;
-		DMA_init_USART_struct.DMA_MemoryBaseAddr     = (uint32_t)TX_buffer;
+		DMA_init_USART_struct.DMA_MemoryBaseAddr     = (uint32_t)TX_Buffer.Buffer;
 		DMA_init_USART_struct.DMA_DIR                = DMA_DIR_PeripheralDST;
-		DMA_init_USART_struct.DMA_BufferSize         = sizeof(TX_buffer);
+		DMA_init_USART_struct.DMA_BufferSize         = sizeof(TX_Buffer.Buffer);
 		DMA_init_USART_struct.DMA_PeripheralInc      = DMA_PeripheralInc_Disable;
 		DMA_init_USART_struct.DMA_MemoryInc          = DMA_MemoryInc_Enable;
 		DMA_init_USART_struct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
@@ -117,9 +117,9 @@ void GPIO_init (void)
 		RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 		
 		DMA_init_USART_struct.DMA_PeripheralBaseAddr = (uint32_t)&USART1->RDR;
-		DMA_init_USART_struct.DMA_MemoryBaseAddr     = (uint32_t)RX_buffer;
+		DMA_init_USART_struct.DMA_MemoryBaseAddr     = (uint32_t)TX_Buffer.Buffer;
 		DMA_init_USART_struct.DMA_DIR                = DMA_DIR_PeripheralSRC;
-		DMA_init_USART_struct.DMA_BufferSize         = sizeof(RX_buffer);
+		DMA_init_USART_struct.DMA_BufferSize         = sizeof(RX_Buffer.Buffer);
 		DMA_init_USART_struct.DMA_PeripheralInc      = DMA_PeripheralInc_Disable;
 		DMA_init_USART_struct.DMA_MemoryInc          = DMA_MemoryInc_Enable;
 		DMA_init_USART_struct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;

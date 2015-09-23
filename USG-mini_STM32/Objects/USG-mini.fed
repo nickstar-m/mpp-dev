@@ -1,14 +1,15 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Tue Sep 22 18:59:53 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Wed Sep 23 18:24:29 2015
 ;VERSION 0.2
+;FILE handlers.o
+DMA1_Channel5_6_IRQHandler <= USED 0
+__asm___10_handlers_c_b672aa62____REV16 <= USED 0
+__asm___10_handlers_c_b672aa62____REVSH <= USED 0
 ;FILE main.o
-Delay_ms <= USED 0
-GetUptime <= USED 0
-GetUptimeStr <= USED 0
-__asm___6_main_c_dd81d552____REV16 <= USED 0
-__asm___6_main_c_dd81d552____REVSH <= USED 0
+InitEnvironment <= USED 0
+__asm___6_main_c_6ec75814____REV16 <= USED 0
+__asm___6_main_c_6ec75814____REVSH <= USED 0
 ;FILE periph_init.o
 DMA_USART_RX_init <= USED 0
-DMA_USART_TX_init <= USED 0
 __asm___13_periph_init_c_7b3262c7____REV16 <= USED 0
 __asm___13_periph_init_c_7b3262c7____REVSH <= USED 0
 ;FILE startup_stm32f030.o
@@ -170,7 +171,6 @@ DMA_GetCurrDataCounter <= USED 0
 DMA_GetFlagStatus <= USED 0
 DMA_GetITStatus <= USED 0
 DMA_ITConfig <= USED 0
-DMA_Init <= USED 0
 DMA_RemapConfig <= USED 0
 DMA_SetCurrDataCounter <= USED 0
 DMA_StructInit <= USED 0
@@ -596,3 +596,9 @@ __asm___16_stm32f0xx_wwdg_c_9668c0ca____REVSH <= USED 0
 SystemCoreClockUpdate <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REV16 <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REVSH <= USED 0
+;FILE utilites.o
+GetUptime <= USED 0
+USART_GetStr <= USED 0
+USART_PutStr <= USED 0
+__asm___10_utilites_c_Delay_ms____REV16 <= USED 0
+__asm___10_utilites_c_Delay_ms____REVSH <= USED 0

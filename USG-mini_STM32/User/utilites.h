@@ -1,5 +1,5 @@
-/**************************************************************************//**
- * @file     periph_init.h
+/******************************************************************************
+ * @file     utilites.h
  * @brief    USG-mini generator main board firmware
  * @version  V1.00
  * @date     21. September 2015
@@ -12,15 +12,11 @@
 
    ---------------------------------------------------------------------------*/
 
-#ifndef PERIPH_INIT_H
-  #define PERIPH_INIT_H
+#include "global.h"
 
-	#include "global.h"
-	
-	void GPIO_init (void);
-	void USART_init_ (void);
-  void DMA_USART_TX_init (void);
-	void ADC_init (void);
-	void RTC_init (void);
-  
-#endif
+void Delay_ms (uint16_t delay_ms);
+void GetUptime(RTC_TimeTypeDef uptime);
+void GetUptimeStr(char *uptime_str);
+int32_t GetTemperature(void);
+void USART_PutStr(char* str);
+char* USART_GetStr(void);

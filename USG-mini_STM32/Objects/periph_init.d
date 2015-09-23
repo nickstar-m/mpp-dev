@@ -1,5 +1,6 @@
 .\objects\periph_init.o: user\periph_init.c
 .\objects\periph_init.o: user\periph_init.h
+.\objects\periph_init.o: user\global.h
 .\objects\periph_init.o: .\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h
 .\objects\periph_init.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h
 .\objects\periph_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -31,4 +32,6 @@
 .\objects\periph_init.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_usart.h
 .\objects\periph_init.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_wwdg.h
 .\objects\periph_init.o: .\STM32F0xx_StdPeriph_Driver\inc\stm32f0xx_misc.h
-.\objects\periph_init.o: user\global.h
+.\objects\periph_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\periph_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\periph_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
