@@ -39,17 +39,17 @@ void GetUptimeStr(char *uptime_str)
 
 int32_t GetTemperature(void)
 {
-  int32_t Temperature = 0;
-	int32_t Calc;
+  int32_t Temperature;
+	static int32_t Calc = 0;
   int32_t Avg_Slope;
 
-	Avg_Slope = (Ts_Cal2 - Ts_Cal1) << 3;
+	Avg_Slope = (Ts_Cal2 - Ts_Cal1) / 8;
   
   while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
   Temperature = ADC_GetConversionValue(ADC1); 
-  Calc = ((((int32_t)Ts_Cal1 - (Temperature * 6 / 5)) * 10 / Avg_Slope) + 300) / 10;
+  Calc += ((((Temperature)*21/20 - (int32_t)Ts_Cal1) * 100 / Avg_Slope) + 300) - Calc / 8;
 
-	return Calc;
+	return Calc / 80;
 }
 
 void USART_PutStr(char* str)
