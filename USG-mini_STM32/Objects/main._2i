@@ -1,5 +1,5 @@
--c --cpu Cortex-M0 -D__EVAL -g -O3 -Otime --apcs=interwork --split_sections -I.\RTE\Device\STM32F030K6 -I.\User -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\STM32F0xx_StdPeriph_Driver -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\CMSIS\Device\ST\STM32F0xx\Source -I.\User -I.\STM32F0xx_StdPeriph_Driver -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src
--I D:\work\repo\USG-mini_STM32\RTE
+-c --cpu Cortex-M0 -g -O3 -Otime --apcs=interwork --split_sections -I.\RTE\Device\STM32F030K6 -I.\User -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src -I.\STM32F0xx_StdPeriph_Driver -I.\CMSIS\Device\ST\STM32F0xx\Include -I.\CMSIS\Device\ST\STM32F0xx\Source -I.\User -I.\STM32F0xx_StdPeriph_Driver -I.\STM32F0xx_StdPeriph_Driver\inc -I.\STM32F0xx_StdPeriph_Driver\src
+-I D:\MPP-dev\USG-mini_STM32\RTE
 -I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
 -I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.4.0\Device\Include
 -D__UVISION_VERSION="514" -D_RTE_ -DSTM32F030

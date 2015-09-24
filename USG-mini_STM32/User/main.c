@@ -33,7 +33,7 @@
   USART_BufferTypeDef TX_Buffer = {"", 0, 0};
 #endif
 
-DevConstantsTypeDef DevConstants;
+const DevConstantsTypeDef DevConstants = CONST_INIT_DATA;
 DevStateTypeDef DevState;
 DevStatisticsTypeDef DevStatistics;
 DevControlVariablesTypeDef DevControlVariables;
@@ -47,13 +47,7 @@ volatile uint16_t delay_count = 0;
 // ---------------------------------------------------------------------------
 void InitEnvironment(void)
 {	
-	strcpy(DevConstants.MODEL,      "USG-mini\0");
-	strcpy(DevConstants.SERIAL,     "UM154000001\0");
-	strcpy(DevConstants.REV_HW,     "HW1.001.A\0");
-  strcpy(DevConstants.REV_FW,     "SW1.001.A\0");
-	strcpy(DevConstants.PROD_DATE,  "20150923\0");
-	strcpy(DevConstants.PMODEL,     "UZM-001\0");
-	strcpy(DevConstants.PSERIAL,    "12345678\0");
+	
 }
 	
 // ---------------------------------------------------------------------------

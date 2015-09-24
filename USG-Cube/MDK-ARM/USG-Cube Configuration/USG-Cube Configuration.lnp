@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"usg-cube configuration\startup_stm32f030x6.o"
+"usg-cube configuration\stm32f0xx_hal_flash_ex.o"
+"usg-cube configuration\stm32f0xx_hal_tim_ex.o"
+"usg-cube configuration\stm32f0xx_hal_flash.o"
+"usg-cube configuration\stm32f0xx_hal_gpio.o"
+"usg-cube configuration\stm32f0xx_hal_pwr.o"
+"usg-cube configuration\stm32f0xx_hal.o"
+"usg-cube configuration\stm32f0xx_hal_uart.o"
+"usg-cube configuration\stm32f0xx_hal_cortex.o"
+"usg-cube configuration\stm32f0xx_hal_uart_ex.o"
+"usg-cube configuration\stm32f0xx_hal_pwr_ex.o"
+"usg-cube configuration\stm32f0xx_hal_adc_ex.o"
+"usg-cube configuration\stm32f0xx_hal_adc.o"
+"usg-cube configuration\stm32f0xx_hal_dma.o"
+"usg-cube configuration\stm32f0xx_hal_rcc_ex.o"
+"usg-cube configuration\stm32f0xx_hal_rcc.o"
+"usg-cube configuration\stm32f0xx_hal_tim.o"
+"usg-cube configuration\system_stm32f0xx.o"
+"usg-cube configuration\stm32f0xx_hal_msp.o"
+"usg-cube configuration\main.o"
+"usg-cube configuration\stm32f0xx_it.o"
+--library_type=microlib --strict --scatter "USG-Cube Configuration\USG-Cube Configuration.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "USG-Cube Configuration.map" -o "USG-Cube Configuration\USG-Cube Configuration.axf"

@@ -15,3 +15,5 @@
 #include "global.h"
 #include "periph_init.h"
 #include "utilites.h"
+
+#define CONST_INIT_DATA {"USG-mini\0", "UM154000001\0", "20150923", "FW1.001.A\0", "HW1.001.A\0", "UZM-001\0", "12345678\0"}

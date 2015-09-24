@@ -133,7 +133,7 @@ typedef struct
 
 }  DevInternalVariablesTypeDef;
 
-extern DevConstantsTypeDef DevConstants;
+extern const DevConstantsTypeDef DevConstants;
 extern DevStateTypeDef DevState;
 extern DevStatisticsTypeDef DevStatistics;
 extern DevControlVariablesTypeDef DevControlVariables;
