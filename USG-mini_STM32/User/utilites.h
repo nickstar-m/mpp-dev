@@ -18,5 +18,5 @@ void Delay_ms (uint16_t delay_ms);
 void GetUptime(RTC_TimeTypeDef uptime);
 void GetUptimeStr(char *uptime_str);
 int32_t GetTemperature(void);
-void USART_PutStr(char* str);
+int USART_PutStr(char* str);
 char* USART_GetStr(void);

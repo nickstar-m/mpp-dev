@@ -52,12 +52,32 @@ int32_t GetTemperature(void)
 	return Calc / 80;
 }
 
-void USART_PutStr(char* str)
+int USART_PutStr(char* str)
 {
-
+  int i;
+	if (TX_Buffer.Pointer + strlen(str) > sizeof(TX_Buffer.Buffer)) {
+	  return -1;
+	}
+	else {
+		memcpy(TX_Buffer.Buffer, str, strlen(str));
+		TX_Buffer.Pointer = 0;
+		for (i=0; i < strlen(str); i++){
+  		USART_SendData(USART1, TX_Buffer.Buffer[TX_Buffer.Pointer]);
+  		TX_Buffer.Pointer++;
+			TX_Buffer.Pointer %= sizeof(TX_Buffer.Buffer);
+			//TX_Buffer.Size++;
+			Delay_ms(5);		
+		}
+	return strlen(str);
+	}
 }
 
 char* USART_GetStr(void)
 {
-  return "";
+  char str[128];
+	if (RX_Buffer.Size > 0){
+	  memcpy(RX_Buffer.Buffer, str, RX_Buffer.Size );
+	}
+	
+	return "";
 }

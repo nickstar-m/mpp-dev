@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Thu Sep 24 18:26:35 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Fri Sep 25 17:42:32 2015
 ;VERSION 0.2
 ;FILE handlers.o
 DMA1_Channel5_6_IRQHandler <= USED 0
@@ -547,8 +547,6 @@ USART_DMAReceptionErrorConfig <= USED 0
 USART_DataInvCmd <= USED 0
 USART_DeInit <= USED 0
 USART_DirectionModeCmd <= USED 0
-USART_GetFlagStatus <= USED 0
-USART_GetITStatus <= USED 0
 USART_HalfDuplexCmd <= USED 0
 USART_ITConfig <= USED 0
 USART_InvPinCmd <= USED 0
@@ -562,7 +560,6 @@ USART_MuteModeWakeUpConfig <= USED 0
 USART_OneBitMethodCmd <= USED 0
 USART_OverSampling8Cmd <= USED 0
 USART_OverrunDetectionConfig <= USED 0
-USART_ReceiveData <= USED 0
 USART_ReceiverTimeOutCmd <= USED 0
 USART_RequestCmd <= USED 0
 USART_STOPModeCmd <= USED 0
@@ -598,7 +595,5 @@ __asm___18_system_stm32f0xx_c_5d646a67____REV16 <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REVSH <= USED 0
 ;FILE utilites.o
 GetUptime <= USED 0
-USART_GetStr <= USED 0
-USART_PutStr <= USED 0
 __asm___10_utilites_c_Delay_ms____REV16 <= USED 0
 __asm___10_utilites_c_Delay_ms____REVSH <= USED 0

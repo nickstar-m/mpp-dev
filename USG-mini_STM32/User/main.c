@@ -31,6 +31,7 @@
 #if (INTERFACE_TYPE == TERMINAL)
   USART_BufferTypeDef RX_Buffer = {"", 0, 0};
   USART_BufferTypeDef TX_Buffer = {"", 0, 0};
+	char buffer[128];
 #endif
 
 const DevConstantsTypeDef DevConstants = CONST_INIT_DATA;
@@ -54,7 +55,6 @@ void InitEnvironment(void)
 // Main()
 // ---------------------------------------------------------------------------
 int main(void){
-  int i;
 	char c[8];
 	int32_t temperature;
 
@@ -93,12 +93,11 @@ int main(void){
 		GetUptimeStr(c);
 		GPIO_SetBits(GPIOA, GPIO_Pin_0);
 		ADC_StartOfConversion(ADC1);
-		for (i=0; i<8; i++){
-  		USART_SendData(USART1, c[i]);
-  		Delay_ms(10);		
-		}
-		USART_SendData(USART1, 13);
+		
+		while (!USART_PutStr(c));
 		GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+ 		sprintf(buffer, "\n\r");
+		while (!USART_PutStr(buffer)){};
 
     // Delay ~0.2 sec.
     Delay_ms(200);
@@ -106,15 +105,9 @@ int main(void){
     //Get temperature
 		temperature = GetTemperature();
 
- 		USART_SendData(USART1, temperature/10 + 48);
-    Delay_ms(10);
-		USART_SendData(USART1, temperature%10 + 48);
-		Delay_ms(10);
-		USART_SendData(USART1, 176);
-		Delay_ms(10);
-		USART_SendData(USART1, 67);
-		Delay_ms(10);
-		USART_SendData(USART1, 13);
+ 		sprintf(buffer, "%d°C\n\r", temperature);
+		while (!USART_PutStr(buffer));
+		USART_GetStr();
 		Delay_ms(2000);
 	}
 }
