@@ -32,13 +32,17 @@
 	{
 		char Buffer[128];                   /*!< Transmit USART Buffer FIFO */
 
-		uint8_t Pointer;                    /*!< Pointer to current output position */
+		uint8_t PushIndex;                  /*!< Pointer to current output position */
+		uint8_t PopIndex;                   /*!< Pointer to current output position */
 
 		uint8_t Size;                       /*!< Size of unprocessed data */
 	} USART_BufferTypeDef;
 	
 	extern USART_BufferTypeDef RX_Buffer;
 	extern USART_BufferTypeDef TX_Buffer;
+	
+	extern char TerminalBuffer[128];
+	extern char buffer[128];
 
 #endif
 

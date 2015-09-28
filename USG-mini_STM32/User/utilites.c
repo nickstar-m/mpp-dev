@@ -55,16 +55,15 @@ int32_t GetTemperature(void)
 int USART_PutStr(char* str)
 {
   int i;
-	if (TX_Buffer.Pointer + strlen(str) > sizeof(TX_Buffer.Buffer)) {
+	if (TX_Buffer.PushIndex + strlen(str) > sizeof(TX_Buffer.Buffer)) {
 	  return -1;
 	}
 	else {
 		memcpy(TX_Buffer.Buffer, str, strlen(str));
-		TX_Buffer.Pointer = 0;
+		TX_Buffer.PushIndex = 0;
 		for (i=0; i < strlen(str); i++){
-  		USART_SendData(USART1, TX_Buffer.Buffer[TX_Buffer.Pointer]);
-  		TX_Buffer.Pointer++;
-			TX_Buffer.Pointer %= sizeof(TX_Buffer.Buffer);
+  		USART_SendData(USART1, TX_Buffer.Buffer[TX_Buffer.PushIndex++]);
+			TX_Buffer.PushIndex %= sizeof(TX_Buffer.Buffer);
 			//TX_Buffer.Size++;
 			Delay_ms(5);		
 		}
@@ -74,10 +73,124 @@ int USART_PutStr(char* str)
 
 char* USART_GetStr(void)
 {
-  char str[128];
-	if (RX_Buffer.Size > 0){
-	  memcpy(RX_Buffer.Buffer, str, RX_Buffer.Size );
+	uint8_t size;
+	size = RX_Buffer.Size;
+	if (size > 0){
+	  if (size > sizeof(RX_Buffer.Buffer) - RX_Buffer.PopIndex)
+		{
+		  memcpy(TerminalBuffer, &RX_Buffer.Buffer[RX_Buffer.PopIndex], sizeof(RX_Buffer.Buffer) - RX_Buffer.PopIndex );
+		  memcpy(&TerminalBuffer[sizeof(RX_Buffer.Buffer) - RX_Buffer.PopIndex], RX_Buffer.Buffer, size + RX_Buffer.PopIndex - sizeof(RX_Buffer.Buffer));
+  		RX_Buffer.PopIndex += size - sizeof(RX_Buffer.Buffer);
+		}
+		else
+		{	
+		  memcpy(TerminalBuffer, &RX_Buffer.Buffer[RX_Buffer.PopIndex], size);
+			RX_Buffer.PopIndex += size;
+		}
+		RX_Buffer.Size -= size;
+  	
+		TerminalBuffer[size] = 0;     //Zero ended string
+  	USART_PutStr(TerminalBuffer); // Echo
+		return TerminalBuffer;
 	}
+	return ""; // No data in the Buffer;
+}
+
+void TerminalProcessor(void)
+{
+	uint8_t pointer = 0;
+  uint8_t state = 0;
+	uint8_t command;
+	uint8_t variable;
 	
-	return "";
+	// 0 start
+	// 1 command without param
+	// 2 command with param
+	// 3 first param (variable)
+	// 4 last param (variable or valuee)
+	// 7 end
+	// 8 illegal command
+  // 9 illegal parameter/variable
+	// 10 illegal value
+  
+	//-----------------------------
+	// Command parser
+	//-----------------------------
+	while ((state < 7) || !TerminalBuffer[pointer])
+	{
+	  switch (state)
+		{
+		  case 0:
+				if (TerminalBuffer[pointer] == 0x0d || TerminalBuffer[pointer] == 0x0a)
+				{
+				  state = 7;
+				}
+				else if (TerminalBuffer[pointer] >= 0x41 && TerminalBuffer[pointer] >= 0x5a)
+        {
+				  state = 1;
+				}
+				else
+				{
+				  state = 8;
+				}	
+				break;
+		  case 1:
+				switch(buffer[pointer])
+        {
+				  case 'G':
+					  pointer++;	
+					  switch(buffer[pointer])
+            {
+    				  case 'E':
+    					  pointer++;	
+      					  switch(buffer[pointer])
+                  {
+    				        case 'T':
+        				      if (buffer[++pointer] == ' ')
+											{
+												state = 2;
+												while (buffer[++pointer] != ' ');
+												sprintf(buffer, "GET command");
+												state = 8;
+											}	
+											else
+											{
+												state = 8;
+											}
+										  break;
+          					default:
+		          				state = 8; 
+				    	        break;
+									}	
+    					default:
+		    				state = 8; 
+				    	  break;	
+						}	
+  				  break;
+				  case 'S':
+  				  break;
+				  case 'L':
+  				  break;
+				  case 'V':
+  				  break;
+					default:
+						state = 8; 
+					  break;	
+				}
+				break;
+		  case 2:
+				break;
+		  case 7:
+				break;
+		  case 8:
+				sprintf(buffer, "Illegal command");
+				break;
+		  case 9:
+				sprintf(buffer, "Unknown variable");
+				break;
+		  case 10:
+				sprintf(buffer, "Invalid value");
+				break;
+		}
+	}	
 }

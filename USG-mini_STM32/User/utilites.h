@@ -20,3 +20,4 @@ void GetUptimeStr(char *uptime_str);
 int32_t GetTemperature(void);
 int USART_PutStr(char* str);
 char* USART_GetStr(void);
+void TerminalProcessor(void);

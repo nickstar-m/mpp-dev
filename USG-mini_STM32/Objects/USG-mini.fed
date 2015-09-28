@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Fri Sep 25 17:42:32 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Mon Sep 28 22:32:58 2015
 ;VERSION 0.2
 ;FILE handlers.o
 DMA1_Channel5_6_IRQHandler <= USED 0
@@ -27,6 +27,7 @@ ADC_DMACmd <= USED 0
 ADC_DMARequestModeConfig <= USED 0
 ADC_DeInit <= USED 0
 ADC_DiscModeCmd <= USED 0
+ADC_GetConversionValue <= USED 0
 ADC_GetITStatus <= USED 0
 ADC_ITConfig <= USED 0
 ADC_JitterCmd <= USED 0
@@ -289,7 +290,6 @@ IWDG_WriteAccessCmd <= USED 0
 __asm___16_stm32f0xx_iwdg_c_15798b01____REV16 <= USED 0
 __asm___16_stm32f0xx_iwdg_c_15798b01____REVSH <= USED 0
 ;FILE stm32f0xx_misc.o
-NVIC_Init <= USED 0
 NVIC_SystemLPConfig <= USED 0
 SysTick_CLKSourceConfig <= USED 0
 __asm___16_stm32f0xx_misc_c_c60eb25e____REV16 <= USED 0
@@ -362,6 +362,7 @@ RTC_GetFlagStatus <= USED 0
 RTC_GetITStatus <= USED 0
 RTC_GetStoreOperation <= USED 0
 RTC_GetSubSecond <= USED 0
+RTC_GetTime <= USED 0
 RTC_GetTimeStamp <= USED 0
 RTC_GetTimeStampSubSecond <= USED 0
 RTC_GetWakeUpCounter <= USED 0
@@ -548,7 +549,6 @@ USART_DataInvCmd <= USED 0
 USART_DeInit <= USED 0
 USART_DirectionModeCmd <= USED 0
 USART_HalfDuplexCmd <= USED 0
-USART_ITConfig <= USED 0
 USART_InvPinCmd <= USED 0
 USART_IrDACmd <= USED 0
 USART_IrDAConfig <= USED 0
@@ -594,6 +594,8 @@ SystemCoreClockUpdate <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REV16 <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REVSH <= USED 0
 ;FILE utilites.o
+GetTemperature <= USED 0
 GetUptime <= USED 0
+GetUptimeStr <= USED 0
 __asm___10_utilites_c_Delay_ms____REV16 <= USED 0
 __asm___10_utilites_c_Delay_ms____REVSH <= USED 0

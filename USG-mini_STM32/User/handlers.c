@@ -35,18 +35,23 @@ void DMA1_Channel5_6_IRQHandler (void)
  *********************************************************/
 void USART1_IRQHandler(void)
 {
-    /* RXNE handler */
-    if(USART_GetITStatus(USART2, USART_IT_RXNE) == SET) // If interrupt by USART_IT_RXNE
-    {
-      if (USART_GetFlagStatus(USART1, USART_FLAG_NE|USART_FLAG_FE|USART_FLAG_PE|USART_FLAG_ORE)) //If no errors
-      {                   
-        RX_Buffer.Buffer[RX_Buffer.Pointer++] = (uint8_t) (USART_ReceiveData(USART2)& 0xFF); // Place data to buffer
-				RX_Buffer.Size++;
-				RX_Buffer.Pointer %= sizeof(RX_Buffer.Buffer);
-      }
-      else USART_ReceiveData(USART1); //Receive errors handler 
+	/* RXNE handler */
+  if((USART_GetITStatus(USART1, USART_IT_RXNE) == SET)) // If interrupt by USART_IT_RXNE
+  {
+    if (!USART_GetFlagStatus(USART1, USART_FLAG_NE|USART_FLAG_FE|USART_FLAG_PE|USART_FLAG_ORE) &&
+  		 (RX_Buffer.Size < sizeof(RX_Buffer.Buffer) - 1)) //If no errors
+    {                   
+			GPIO_SetBits(GPIOA, GPIO_Pin_0);  
+			RX_Buffer.Buffer[RX_Buffer.PushIndex++] = (uint8_t) (USART_ReceiveData(USART1)& 0xFF); // Place data to buffer
+			RX_Buffer.Size++;
+			RX_Buffer.PushIndex %= sizeof(RX_Buffer.Buffer);
     }
+    else
+		{
+      USART_ReceiveData(USART1); //Receive errors handler 
+		}	
+  }
      
-    /* ------------------------------------------------------------ */
-    /* Other USART1 interrupts handler can go here ...              */
+  /* ------------------------------------------------------------ */
+  /* Other USART1 interrupts handler can go here ...              */
 }

@@ -22,5 +22,6 @@
   void DMA_USART_TX_init (void);
 	void ADC_init (void);
 	void RTC_init (void);
+	void NVIC_init (void);
   
 #endif

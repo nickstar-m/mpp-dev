@@ -32,6 +32,7 @@
   USART_BufferTypeDef RX_Buffer = {"", 0, 0};
   USART_BufferTypeDef TX_Buffer = {"", 0, 0};
 	char buffer[128];
+	char TerminalBuffer[128];
 #endif
 
 const DevConstantsTypeDef DevConstants = CONST_INIT_DATA;
@@ -71,6 +72,8 @@ int main(void){
 	
 	RTC_init();
 	
+	NVIC_init();
+	
 	SysTick_Config(SystemCoreClock / 1000); // 1 ms
 	
 	InitEnvironment();
@@ -90,24 +93,29 @@ int main(void){
   
 	// Main loop
 	while(1){
-		GetUptimeStr(c);
-		GPIO_SetBits(GPIOA, GPIO_Pin_0);
-		ADC_StartOfConversion(ADC1);
+		//GetUptimeStr(c);
+		//GPIO_SetBits(GPIOA, GPIO_Pin_0);
+		//ADC_StartOfConversion(ADC1);
 		
-		while (!USART_PutStr(c));
+		//while (!USART_PutStr(c));
 		GPIO_ResetBits(GPIOA, GPIO_Pin_0);
- 		sprintf(buffer, "\n\r");
-		while (!USART_PutStr(buffer)){};
+ 		//sprintf(buffer, "\n\r");
+		//while (!USART_PutStr(buffer)){};
 
     // Delay ~0.2 sec.
-    Delay_ms(200);
+    //Delay_ms(200);
    
     //Get temperature
-		temperature = GetTemperature();
+		//temperature = GetTemperature();
 
- 		sprintf(buffer, "%d°C\n\r", temperature);
-		while (!USART_PutStr(buffer));
+ 		//sprintf(buffer, "%d°C\n\r", temperature);
+		//while (!USART_PutStr(buffer));
 		USART_GetStr();
-		Delay_ms(2000);
+		if (TerminalBuffer[0] != '\0')
+		{	
+		  TerminalProcessor();
+		  while (!USART_PutStr(buffer));
+		}	
+		Delay_ms(10);
 	}
 }

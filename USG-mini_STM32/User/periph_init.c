@@ -75,7 +75,6 @@ void GPIO_init (void)
 		USART_Init(USART1, &USART_init_d);
 		
 		USART_Cmd(USART1, ENABLE);
-
 	}
 
 #endif
@@ -203,5 +202,14 @@ void RTC_init (void)
 // ---------------------------------------------------
 
 // ---------------------------------------------------
-// IRQ init proc
+// NVIC init proc
 // ---------------------------------------------------
+void NVIC_init(void){
+  NVIC_InitTypeDef NVIC_InitStructure;
+	// Enable the USART RX Interrupt 
+  USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+  NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+  NVIC_Init(&NVIC_InitStructure);
+}

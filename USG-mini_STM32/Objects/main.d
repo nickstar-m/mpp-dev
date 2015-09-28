@@ -37,3 +37,4 @@
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\main.o: User\periph_init.h
 .\objects\main.o: User\utilites.h
+.\objects\main.o: User\handlers.h
