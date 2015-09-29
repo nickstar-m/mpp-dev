@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Mon Sep 28 22:32:58 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Tue Sep 29 18:10:44 2015
 ;VERSION 0.2
 ;FILE handlers.o
 DMA1_Channel5_6_IRQHandler <= USED 0
@@ -593,6 +593,10 @@ __asm___16_stm32f0xx_wwdg_c_9668c0ca____REVSH <= USED 0
 SystemCoreClockUpdate <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REV16 <= USED 0
 __asm___18_system_stm32f0xx_c_5d646a67____REVSH <= USED 0
+;FILE terminal.o
+Ver <= USED 0
+__asm___10_terminal_c_Commands____REV16 <= USED 0
+__asm___10_terminal_c_Commands____REVSH <= USED 0
 ;FILE utilites.o
 GetTemperature <= USED 0
 GetUptime <= USED 0

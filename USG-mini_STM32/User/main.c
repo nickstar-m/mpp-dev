@@ -56,9 +56,6 @@ void InitEnvironment(void)
 // Main()
 // ---------------------------------------------------------------------------
 int main(void){
-	char c[8];
-	int32_t temperature;
-
 	// ---------------------------------------------------------------------------
   // Init section
   // ---------------------------------------------------------------------------
@@ -110,11 +107,10 @@ int main(void){
 
  		//sprintf(buffer, "%d°C\n\r", temperature);
 		//while (!USART_PutStr(buffer));
-		USART_GetStr();
-		if (TerminalBuffer[0] != '\0')
+		;
+		if (USART_GetStr() != NULL)
 		{	
 		  TerminalProcessor();
-		  while (!USART_PutStr(buffer));
 		}	
 		Delay_ms(10);
 	}

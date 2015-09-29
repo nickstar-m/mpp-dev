@@ -3,6 +3,7 @@
 ".\objects\periph_init.o"
 ".\objects\utilites.o"
 ".\objects\handlers.o"
+".\objects\terminal.o"
 ".\objects\stm32f0xx_adc.o"
 ".\objects\stm32f0xx_can.o"
 ".\objects\stm32f0xx_cec.o"

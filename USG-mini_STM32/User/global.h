@@ -53,11 +53,11 @@ typedef struct
 {
 	char SERIAL[16];													/*!<  */
 	char MODEL[16];  												  /*!<  */
-	char PROD_DATE[8];	 											/*!<  */
+	char PROD_DATE[11];	 											/*!<  */
 	char REV_FW[16];													/*!<  */
 	char REV_HW[16];													/*!<  */
-	char PSERIAL[16];												  /*!<  */
 	char PMODEL[16];													/*!<  */
+	char PSERIAL[16];												  /*!<  */
 	
 } DevConstantsTypeDef;
 	

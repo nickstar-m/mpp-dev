@@ -471,6 +471,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\handlers.c</FilePath>
             </File>
+            <File>
+              <FileName>terminal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\terminal.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1070,6 +1075,11 @@
               <FileName>handlers.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\handlers.c</FilePath>
+            </File>
+            <File>
+              <FileName>terminal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\terminal.c</FilePath>
             </File>
           </Files>
         </Group>
