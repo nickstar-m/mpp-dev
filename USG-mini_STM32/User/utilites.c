@@ -25,31 +25,30 @@ void Delay_ms (uint16_t delay_ms)
 	while (delay_count);
 }
 
-void GetUptime(RTC_TimeTypeDef uptime)
+void GetUptime(RTC_TimeTypeDef *uptime)
 {
-  RTC_GetTime(RTC_Format_BIN, &uptime);
+	RTC_GetTime(RTC_Format_BIN, uptime);
 }
 
-void GetUptimeStr(char *uptime_str)
+void GetTemperature(int16_t *temperature)
 {
-  RTC_TimeTypeDef uptime; // Uptime
-  RTC_GetTime(RTC_Format_BIN, &uptime);
-	sprintf(uptime_str,"%02d:%02d:%02d",uptime.RTC_Hours, uptime.RTC_Minutes, uptime.RTC_Seconds);
-}
+	int16_t tmp;
+	static int16_t Calc = 2000;
+  static int16_t Avg_Slope = 0;
 
-int32_t GetTemperature(void)
-{
-  int32_t Temperature;
-	static int32_t Calc = 0;
-  int32_t Avg_Slope;
-
-	Avg_Slope = (Ts_Cal2 - Ts_Cal1) / 8;
+	if (!Avg_Slope) Avg_Slope = (Ts_Cal2 - Ts_Cal1) / 8;
   
-  while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
-  Temperature = ADC_GetConversionValue(ADC1); 
-  Calc += ((((Temperature)*21/20 - (int32_t)Ts_Cal1) * 100 / Avg_Slope) + 300) - Calc / 8;
+  ADC_StartOfConversion(ADC1);
+  while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET){};
+	
+	tmp = ADC_GetConversionValue(ADC1);
+	
+  sprintf(buffer, "calc=%d\rAvg_Slope=%d\rtmp=%d\r\r", Calc, Avg_Slope, tmp);
+	USART_PutStr(buffer);
+		
+	Calc += (((tmp*21/20 - Ts_Cal1) * 100 / Avg_Slope) + 300) - Calc / 8;
 
-	return Calc / 80;
+	*temperature = Calc / 8;
 }
 
 int USART_PutStr(char* str)
@@ -89,10 +88,26 @@ char* USART_GetStr(void)
 		}
 		RX_Buffer.Size -= size;
   	
-		TerminalBuffer[size] = 0;     //Zero ended string
+		TerminalBuffer[size] = 0;     // Null terminated string
   	USART_PutStr(TerminalBuffer); // Echo
 		return TerminalBuffer;
 	}
 	return NULL; // No data in the Buffer;
 }
 
+void Monitor(void)
+{
+	GetTemperature(&DevState.T_CASE);	  /*!< Temperature of the case (STM32 internal sensor) */
+  DevState.T_KEYS = 250;							/*!< Temperature of the transistors (external sensor) */
+  DevState.VIN = 2200;    						/*!< Electrical grid RMS voltage */
+  DevState.V33 = 330;									/*!< 3.3V supply voltage */
+  DevState.V15 = 1500;								/*!< 5V supply voltage */
+  DevState.HV = 3110;									/*!< The supply voltage of the keys */
+  DevState.CG = 220;									/*!< Current of the generator */
+  DevState.CH = 300;									/*!< Current of the heater */
+  GetUptime(&DevState.UPTIME);       	/*!< Uptime aftr last power on */
+  DevState.HEAT_STATE = 0;						/*!< Heater state (ON/OFF) */
+  DevState.TRIAC_ANGLE = 12;					/*!< Triac control algle, degrees */
+  DevState.GEN_STATE = 1;		  				/*!< Generator state (ON/OFF)*/
+  DevState.LAST_ERROR = 0;						/*!< Last error code */
+}

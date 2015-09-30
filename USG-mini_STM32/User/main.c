@@ -49,7 +49,11 @@ volatile uint16_t delay_count = 0;
 // ---------------------------------------------------------------------------
 void InitEnvironment(void)
 {	
-	
+  // Start the first conversion
+  ADC_StartOfConversion(ADC1);
+  
+	Monitor();
+	Delay_ms(500);
 }
 	
 // ---------------------------------------------------------------------------
@@ -73,8 +77,6 @@ int main(void){
 	
 	SysTick_Config(SystemCoreClock / 1000); // 1 ms
 	
-	InitEnvironment();
-	
 	//(#) Enable the internal connection of Temperature sensor, Vrefint or Vbat
   //    sources with the ADC channels using ADC_TempSensorCmd(), ADC_VrefintCmd()
   //    or ADC_VbatCmd() functions.
@@ -84,34 +86,20 @@ int main(void){
   //    or ADC_Channel_18(Voltage battery) using ADC_ChannelConfig() function
   ADC_ChannelConfig(ADC1, ADC_Channel_TempSensor, ADC_SampleTime_28_5Cycles);
 
-  // Start the first conversion
-  ADC_StartOfConversion(ADC1);
 	//DMA_USART_TX_init();
   
+	InitEnvironment();
+	
 	// Main loop
 	while(1){
-		//GetUptimeStr(c);
-		//GPIO_SetBits(GPIOA, GPIO_Pin_0);
-		//ADC_StartOfConversion(ADC1);
-		
-		//while (!USART_PutStr(c));
-		GPIO_ResetBits(GPIOA, GPIO_Pin_0);
- 		//sprintf(buffer, "\n\r");
-		//while (!USART_PutStr(buffer)){};
-
-    // Delay ~0.2 sec.
-    //Delay_ms(200);
-   
-    //Get temperature
-		//temperature = GetTemperature();
-
- 		//sprintf(buffer, "%d°C\n\r", temperature);
-		//while (!USART_PutStr(buffer));
-		;
 		if (USART_GetStr() != NULL)
 		{	
 		  TerminalProcessor();
 		}	
-		Delay_ms(10);
+		Delay_ms(100);
+		Monitor();
+	  GPIO_SetBits(GPIOA, GPIO_Pin_0);
+  	Delay_ms(100);
+		GPIO_ResetBits(GPIOA, GPIO_Pin_0);  
 	}
 }

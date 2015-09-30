@@ -14,10 +14,12 @@
 
 #include "global.h"
 
-void Delay_ms (uint16_t delay_ms);
-void GetUptime(RTC_TimeTypeDef uptime);
-void GetUptimeStr(char *uptime_str);
-int32_t GetTemperature(void);
+void Delay_ms(uint16_t delay_ms);
+
+void GetUptime(RTC_TimeTypeDef *uptime);
+void GetTemperature(int16_t *temperature);
+
 int USART_PutStr(char* str);
 char* USART_GetStr(void);
 
+void Monitor(void);

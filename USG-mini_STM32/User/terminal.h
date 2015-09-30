@@ -24,9 +24,10 @@ void TerminalProcessor(void);
 
 void Ver(void);
 void Ser(void);
-void Stat(void);
+void Status(void);
 void Log(void);
-	
+
+
 #define PROMT  "\r\n\r\nUSG-mini>"
 
 //==================================================

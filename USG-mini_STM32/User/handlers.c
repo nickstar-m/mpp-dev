@@ -41,13 +41,13 @@ void USART1_IRQHandler(void)
     if (!USART_GetFlagStatus(USART1, USART_FLAG_NE|USART_FLAG_FE|USART_FLAG_PE|USART_FLAG_ORE) &&
   		 (RX_Buffer.Size < sizeof(RX_Buffer.Buffer) - 1)) //If no errors
     {                   
-			GPIO_SetBits(GPIOA, GPIO_Pin_0);  
 			RX_Buffer.Buffer[RX_Buffer.PushIndex++] = (uint8_t) (USART_ReceiveData(USART1)& 0xFF); // Place data to buffer
 			RX_Buffer.Size++;
 			RX_Buffer.PushIndex %= sizeof(RX_Buffer.Buffer);
     }
     else
 		{
+			GPIO_SetBits(GPIOA, GPIO_Pin_0);  
       USART_ReceiveData(USART1); //Receive errors handler 
 		}	
   }

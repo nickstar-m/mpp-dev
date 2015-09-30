@@ -66,19 +66,19 @@ typedef struct
 // -----------------------------------
 typedef struct
 {
-  uint16_t T_CASE;										/*!<  */
-  uint16_t T_KEYS;										/*!<  */
-  uint16_t VIN;												/*!<  */
-  uint16_t V33;												/*!<  */
-  uint16_t V15;												/*!<  */
-  uint16_t HV;												/*!<  */
-  uint16_t CG;												/*!<  */
-  uint16_t CH;												/*!<  */
-  RTC_TimeTypeDef UPTIME;							/*!<  */
-  uint16_t HEAT_STATE;								/*!<  */
-  uint16_t TRIAC_ANGLE;								/*!<  */
-  uint16_t GEN_STATE;									/*!<  */
-  uint16_t LAST_ERROR;								/*!<  */
+  int16_t T_CASE;				              /*!< Temperature of the case (STM32 internal sensor) */
+  int16_t T_KEYS;						          /*!< Temperature of the transistors (external sensor) */
+  uint16_t VIN;							          /*!< Electrical grid RMS voltage */
+  uint16_t V33;							          /*!< 3.3V supply voltage */
+  uint16_t V15;							          /*!< 5V supply voltage */
+  uint16_t HV;								        /*!< The supply voltage of the keys */
+  uint16_t CG;								        /*!< Current of the generator */
+  uint16_t CH;								        /*!< Current of the heater */
+  RTC_TimeTypeDef UPTIME;							/*!< Uptime aftr last power on */
+  uint16_t HEAT_STATE;				        /*!< Heater state (ON/OFF) */
+  uint16_t TRIAC_ANGLE;			          /*!< Triac control algle, degrees */
+  uint16_t GEN_STATE;				          /*!< Generator state (ON/OFF)*/
+  uint16_t LAST_ERROR;				        /*!< Last error code */
 	
 } DevStateTypeDef;
 
@@ -144,7 +144,5 @@ extern DevControlVariablesTypeDef DevControlVariables;
 extern DevAdditionalControlVariablesTypeDef DevAdditionalControlVariables;
 	
 extern volatile uint16_t delay_count;
-
-
 	
 #endif

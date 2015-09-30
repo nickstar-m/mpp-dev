@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Tue Sep 29 18:10:44 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Wed Sep 30 18:13:43 2015
 ;VERSION 0.2
 ;FILE handlers.o
 DMA1_Channel5_6_IRQHandler <= USED 0
@@ -27,7 +27,6 @@ ADC_DMACmd <= USED 0
 ADC_DMARequestModeConfig <= USED 0
 ADC_DeInit <= USED 0
 ADC_DiscModeCmd <= USED 0
-ADC_GetConversionValue <= USED 0
 ADC_GetITStatus <= USED 0
 ADC_ITConfig <= USED 0
 ADC_JitterCmd <= USED 0
@@ -362,7 +361,6 @@ RTC_GetFlagStatus <= USED 0
 RTC_GetITStatus <= USED 0
 RTC_GetStoreOperation <= USED 0
 RTC_GetSubSecond <= USED 0
-RTC_GetTime <= USED 0
 RTC_GetTimeStamp <= USED 0
 RTC_GetTimeStampSubSecond <= USED 0
 RTC_GetWakeUpCounter <= USED 0
@@ -598,8 +596,6 @@ Ver <= USED 0
 __asm___10_terminal_c_Commands____REV16 <= USED 0
 __asm___10_terminal_c_Commands____REVSH <= USED 0
 ;FILE utilites.o
-GetTemperature <= USED 0
 GetUptime <= USED 0
-GetUptimeStr <= USED 0
 __asm___10_utilites_c_Delay_ms____REV16 <= USED 0
 __asm___10_utilites_c_Delay_ms____REVSH <= USED 0
