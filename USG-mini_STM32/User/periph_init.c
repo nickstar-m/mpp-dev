@@ -169,7 +169,13 @@ void ADC_init (void)
   //(#) Activate the ADC peripheral using ADC_Cmd() function.
   ADC_Cmd(ADC1, ENABLE);
 
-  // Wait until ADC enabled
+  // Set sample time for the internal temperature sensor
+	ADC_ChannelConfig(ADC1, ADC_Channel_TempSensor, ADC_SampleTime_28_5Cycles);
+	
+  // Set sample time for the internal voltage reference supply
+	ADC_ChannelConfig(ADC1, ADC_Channel_Vrefint, ADC_SampleTime_239_5Cycles);
+
+// Wait until ADC enabled
   while(ADC_GetFlagStatus(ADC1, ADC_FLAG_ADEN) == RESET);
 }	
 	

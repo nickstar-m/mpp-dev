@@ -77,15 +77,6 @@ int main(void){
 	
 	SysTick_Config(SystemCoreClock / 1000); // 1 ms
 	
-	//(#) Enable the internal connection of Temperature sensor, Vrefint or Vbat
-  //    sources with the ADC channels using ADC_TempSensorCmd(), ADC_VrefintCmd()
-  //    or ADC_VbatCmd() functions.
-  ADC_TempSensorCmd(ENABLE);
-
-  //(#) select the ADC_Channel_16(Temperature sensor), ADC_Channel_17(Vrefint)
-  //    or ADC_Channel_18(Voltage battery) using ADC_ChannelConfig() function
-  ADC_ChannelConfig(ADC1, ADC_Channel_TempSensor, ADC_SampleTime_28_5Cycles);
-
 	//DMA_USART_TX_init();
   
 	InitEnvironment();

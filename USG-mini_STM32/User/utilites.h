@@ -18,6 +18,7 @@ void Delay_ms(uint16_t delay_ms);
 
 void GetUptime(RTC_TimeTypeDef *uptime);
 void GetTemperature(int16_t *temperature);
+void GetAVdd(uint16_t *avdd);
 
 int USART_PutStr(char* str);
 char* USART_GetStr(void);

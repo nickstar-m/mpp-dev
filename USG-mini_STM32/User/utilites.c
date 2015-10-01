@@ -13,8 +13,10 @@
    ---------------------------------------------------------------------------*/
 # include "utilites.h"
 
-#define Ts_Cal1    (*((uint16_t*)0x1FFFF7B8))
-#define Ts_Cal2    (*((uint16_t*)0x1FFFF7C2))
+// Factory calibration values
+#define TS_CAL1      (*((uint16_t*)0x1FFFF7B8))
+#define TS_CAL2      (*((uint16_t*)0x1FFFF7C2))
+#define VREFINT_CAL  (*((uint16_t*)0x1FFFF7BA))
 
 // ---------------------------------------------------------------------------
 // Utilites
@@ -34,21 +36,40 @@ void GetTemperature(int16_t *temperature)
 {
 	int16_t tmp;
 	static int16_t Calc = 2000;
-  static int16_t Avg_Slope = 0;
+  int16_t Avg_Slope = 0;
 
-	if (!Avg_Slope) Avg_Slope = (Ts_Cal2 - Ts_Cal1) / 8;
+	Avg_Slope = (TS_CAL1 - TS_CAL2) / 8;
+
+  ADC_TempSensorCmd(ENABLE);
   
   ADC_StartOfConversion(ADC1);
   while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET){};
 	
-	tmp = ADC_GetConversionValue(ADC1);
+	tmp = (int16_t)ADC_GetConversionValue(ADC1);
 	
-  sprintf(buffer, "calc=%d\rAvg_Slope=%d\rtmp=%d\r\r", Calc, Avg_Slope, tmp);
+  sprintf(buffer, "calc=%d\rAvg_Slope=%d\rtmp=%d\rV33=%d\r\r", Calc, Avg_Slope, tmp, DevState.V33);
 	USART_PutStr(buffer);
 		
-	Calc += (((tmp*21/20 - Ts_Cal1) * 100 / Avg_Slope) + 300) - Calc / 8;
+	//Calc += (((tmp*21/20 - Ts_Cal1) * 100 / Avg_Slope) + 300) - Calc / 8;
+	Calc = (((TS_CAL1 - tmp) * 100 / Avg_Slope) + 300);
 
-	*temperature = Calc / 8;
+  ADC_TempSensorCmd(DISABLE);
+	//*temperature = Calc / 8;
+	*temperature = Calc;	
+}
+
+void GetAVdd(uint16_t *avdd)
+{
+  uint16_t vrefint;
+	ADC_VrefintCmd(ENABLE);
+
+  ADC_StartOfConversion(ADC1);
+  while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET){};
+		
+	vrefint = (int16_t)ADC_GetConversionValue(ADC1);
+		
+  *avdd = 330 * VREFINT_CAL / vrefint + 35; // +35 is temporary added to correction broken IC. REMOVE IT!
+	ADC_VrefintCmd(DISABLE);
 }
 
 int USART_PutStr(char* str)
@@ -100,7 +121,7 @@ void Monitor(void)
 	GetTemperature(&DevState.T_CASE);	  /*!< Temperature of the case (STM32 internal sensor) */
   DevState.T_KEYS = 250;							/*!< Temperature of the transistors (external sensor) */
   DevState.VIN = 2200;    						/*!< Electrical grid RMS voltage */
-  DevState.V33 = 330;									/*!< 3.3V supply voltage */
+  GetAVdd(&DevState.V33);  						/*!< 3.3V supply voltage */
   DevState.V15 = 1500;								/*!< 5V supply voltage */
   DevState.HV = 3110;									/*!< The supply voltage of the keys */
   DevState.CG = 220;									/*!< Current of the generator */
