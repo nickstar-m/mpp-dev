@@ -67,7 +67,7 @@ int main(void){
 	
 	USART_init_();
 	DMA_USART_TX_init();
-	DMA_USART_TX_init();
+	DMA_USART_RX_init();
 	
 	ADC_init ();
 	
