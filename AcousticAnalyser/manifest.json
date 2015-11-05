@@ -1,0 +1,13 @@
+{
+  "name": "Ultrasonic Acoustic System Frequency Response Analyser",
+  "description": "Ultrasonic Acoustic System Frequency Response Analyser",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "images/ultrasonic-16.png", "128": "images/ultrasonic-128.png" },
+  "permissions": [ {"fileSystem": ["write"]} ]
+}
