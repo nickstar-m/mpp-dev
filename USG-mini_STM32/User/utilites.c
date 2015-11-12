@@ -41,6 +41,7 @@ void GetTemperature(int16_t *temperature)
 	Avg_Slope = (TS_CAL1 - TS_CAL2) / 8;
 
   ADC_TempSensorCmd(ENABLE);
+  Delay_ms(50);
   
   ADC_StartOfConversion(ADC1);
   while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET){};
@@ -62,7 +63,7 @@ void GetAVdd(uint16_t *avdd)
 {
   uint16_t vrefint;
 	ADC_VrefintCmd(ENABLE);
-
+  Delay_ms(50);
   ADC_StartOfConversion(ADC1);
   while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET){};
 		

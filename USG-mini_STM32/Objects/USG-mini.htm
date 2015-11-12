@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\USG-mini.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\USG-mini.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Oct 01 17:21:12 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Oct 15 14:31:21 2015
 <BR><P>
-<H3>Maximum Stack Usage =        168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-__rt_entry_main &rArr; main &rArr; TerminalProcessor &rArr; Status &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
+__rt_entry_main &rArr; main &rArr; Monitor &rArr; GetTemperature &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 <P>
 <H3>
 Functions with no stack information
@@ -231,8 +231,8 @@ Global Symbols
 <P><STRONG><a name="[ac]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[3c]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; TerminalProcessor &rArr; Status &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; Monitor &rArr; GetTemperature &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -376,7 +376,6 @@ Global Symbols
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ser
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminalProcessor
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
 <P><STRONG><a name="[46]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -485,7 +484,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Status
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
 <P><STRONG><a name="[b4]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
@@ -577,17 +575,17 @@ Global Symbols
 
 <P><STRONG><a name="[ba]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[5e]"></a>ADC_ChannelConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_ChannelConfig))
+<P><STRONG><a name="[5f]"></a>ADC_ChannelConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_ChannelConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
 </UL>
 
 <P><STRONG><a name="[bb]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[5d]"></a>ADC_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_Cmd))
+<P><STRONG><a name="[5c]"></a>ADC_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_Cmd))
 <BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
 </UL>
 
-<P><STRONG><a name="[5c]"></a>ADC_GetCalibrationFactor</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_GetCalibrationFactor))
+<P><STRONG><a name="[5e]"></a>ADC_GetCalibrationFactor</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_GetCalibrationFactor))
 <BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
 </UL>
 
@@ -596,7 +594,7 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
-<P><STRONG><a name="[5f]"></a>ADC_GetFlagStatus</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_GetFlagStatus))
+<P><STRONG><a name="[5d]"></a>ADC_GetFlagStatus</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_GetFlagStatus))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
@@ -616,24 +614,23 @@ Global Symbols
 
 <P><STRONG><a name="[64]"></a>ADC_TempSensorCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_TempSensorCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
 <P><STRONG><a name="[6a]"></a>ADC_VrefintCmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f0xx_adc.o(i.ADC_VrefintCmd))
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
-<P><STRONG><a name="[57]"></a>ADC_init</STRONG> (Thumb, 120 bytes, Stack size 48 bytes, periph_init.o(i.ADC_init))
+<P><STRONG><a name="[57]"></a>ADC_init</STRONG> (Thumb, 122 bytes, Stack size 48 bytes, periph_init.o(i.ADC_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = ADC_init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHBPeriphClockCmd
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetCalibrationFactor
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Cmd
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ChannelConfig
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetCalibrationFactor
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Cmd
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ChannelConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -692,29 +689,31 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[63]"></a>GetTemperature</STRONG> (Thumb, 124 bytes, Stack size 32 bytes, utilites.o(i.GetTemperature), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_TempSensorCmd
+<P><STRONG><a name="[63]"></a>GetTemperature</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, utilites.o(i.GetTemperature))
+<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
+<LI>Call Chain = GetTemperature &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_TempSensorCmd
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_PutStr
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_StartOfConversion
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
+</UL>
 
-<P><STRONG><a name="[69]"></a>Monitor</STRONG> (Thumb, 234 bytes, Stack size 32 bytes, utilites.o(i.Monitor))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160 + Unknown Stack Size
-<LI>Call Chain = Monitor &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
+<P><STRONG><a name="[69]"></a>Monitor</STRONG> (Thumb, 132 bytes, Stack size 16 bytes, utilites.o(i.Monitor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = Monitor &rArr; GetTemperature &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_VrefintCmd
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_TempSensorCmd
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_PutStr
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetFlagStatus
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_StartOfConversion
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -919,7 +918,6 @@ Global Symbols
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTemperature
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetStr
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminalProcessor
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor
 </UL>
 
 <P><STRONG><a name="[82]"></a>USART_ReceiveData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f0xx_usart.o(i.USART_ReceiveData))
@@ -953,8 +951,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3d]"></a>main</STRONG> (Thumb, 142 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
-<LI>Call Chain = main &rArr; TerminalProcessor &rArr; Status &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
+<BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
+<LI>Call Chain = main &rArr; Monitor &rArr; GetTemperature &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_init_
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetStr

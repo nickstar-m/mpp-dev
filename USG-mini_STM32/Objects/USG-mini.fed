@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Thu Oct 01 17:21:01 2015
+;#<FEEDBACK># ARM Linker, 5050106: Last Updated: Thu Oct 15 14:31:10 2015
 ;VERSION 0.2
 ;FILE handlers.o
 DMA1_Channel5_6_IRQHandler <= USED 0
@@ -596,7 +596,6 @@ __asm___10_terminal_c_Commands____REV16 <= USED 0
 __asm___10_terminal_c_Commands____REVSH <= USED 0
 ;FILE utilites.o
 GetAVdd <= USED 0
-GetTemperature <= USED 0
 GetUptime <= USED 0
 __asm___10_utilites_c_Delay_ms____REV16 <= USED 0
 __asm___10_utilites_c_Delay_ms____REVSH <= USED 0

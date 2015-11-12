@@ -164,19 +164,21 @@ void ADC_init (void)
   ADC_Init_struct.ADC_ScanDirection = ADC_ScanDirection_Upward;
   ADC_Init(ADC1, &ADC_Init_struct);
 
-  // Calibrate ADC before enabling
-  ADC_GetCalibrationFactor(ADC1);
   //(#) Activate the ADC peripheral using ADC_Cmd() function.
   ADC_Cmd(ADC1, ENABLE);
 
-  // Set sample time for the internal temperature sensor
+  // Calibrate ADC after enabling
+  ADC_GetCalibrationFactor(ADC1);
+
+  // Wait until ADC enabled
+  while(ADC_GetFlagStatus(ADC1, ADC_FLAG_ADEN) == RESET);
+  
+	// Set sample time for the internal temperature sensor
 	ADC_ChannelConfig(ADC1, ADC_Channel_TempSensor, ADC_SampleTime_28_5Cycles);
 	
   // Set sample time for the internal voltage reference supply
-	ADC_ChannelConfig(ADC1, ADC_Channel_Vrefint, ADC_SampleTime_239_5Cycles);
+	ADC_ChannelConfig(ADC1, ADC_Channel_Vrefint, ADC_SampleTime_28_5Cycles);
 
-// Wait until ADC enabled
-  while(ADC_GetFlagStatus(ADC1, ADC_FLAG_ADEN) == RESET);
 }	
 	
 // ---------------------------------------------------
