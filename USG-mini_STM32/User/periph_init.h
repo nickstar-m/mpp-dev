@@ -20,6 +20,7 @@
 	void GPIO_init (void);
 	void USART_init_ (void);
   void DMA_USART_TX_init (void);
+  void DMA_USART_RX_init (void);
 	void ADC_init (void);
 	void RTC_init (void);
 	void NVIC_init (void);
