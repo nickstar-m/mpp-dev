@@ -8,35 +8,41 @@ document.getElementById('importFile').addEventListener('click', function(e) {
 
     readOnlyEntry.file(function(file) {
       var reader = new FileReader();
-
+      reader.fileName = file.name;
       //reader.onerror = errorHandler;
       reader.onloadend = function(e) {
         var content = e.target.result;
         var fileType = content.substr(0,8);
         var number;
         var offset = 10 + 41 * 4;
+		var filename = document.getElementById("filename");
+		if (content.substr(0,8) == "PVD_PV65") {
+			filename.innerHTML = e.target.fileName;
+			data = [[], [[],[]], [[],[]], []];
 
-        data = [[], [[],[]], [[],[]]];
+			for (var i=0; i<41; i++) {
+					number = content.substr(10 + i * 4, 4);
+			  data[0].push((number.charCodeAt(3)<<24) +
+					 (number.charCodeAt(2)<<16) +
+					 (number.charCodeAt(1)<<8) +
+					  number.charCodeAt(0));
+			};  
 
-        for (var i=0; i<41; i++) {
-                number = content.substr(10 + i * 4, 4);
-          data[0].push((number.charCodeAt(3)<<24) +
-                 (number.charCodeAt(2)<<16) +
-                 (number.charCodeAt(1)<<8) +
-                  number.charCodeAt(0));
-        };  
-
-        for (var i=0; i<data[0][6]; i++) {
-      
-          data[1][0].push(content.charCodeAt(offset + 0 + i * 2));
-          data[1][1].push(content.charCodeAt(offset + 1 + i * 2));
-          data[2][0].push(content.charCodeAt(offset + 2 * data[0][6] + 0 + i * 2));
-          data[2][1].push(content.charCodeAt(offset + 2 * data[0][6] + 0 + i * 2));
-        };
-        
-        showSettings();
-        showHeader();
-        drawDiagram();
+			for (var i=0; i<data[0][6]; i++) {
+		  
+			  data[1][0].push(content.charCodeAt(offset + 0 + i * 2));
+			  data[1][1].push(content.charCodeAt(offset + 1 + i * 2));
+			  data[2][0].push(content.charCodeAt(offset + 2 * data[0][6] + 0 + i * 2));
+			  data[2][1].push(content.charCodeAt(offset + 2 * data[0][6] + 1 + i * 2));
+			  data[3].push((data[1][1][i] - data[1][0][i]) / (data[2][1][i] - data[2][0][i]) * data[0][2] / data[0][4] * 100);
+			};
+			
+			//showSettings();
+			showHeader();
+			drawDiagram();
+        } else {
+		    filename.innerHTML = 'ERROR: Unrecognized file type!';
+		}
       };
 	    reader.readAsBinaryString(file);
 	  });
@@ -55,7 +61,23 @@ function showSettings(){
 };
 
 function showHeader(){
-
+  document.getElementById('device').innerHTML = (data[0][0] == 31) ? 'PV6503A' : 'UNKNOWN';
+  document.getElementById('samples').innerHTML = data[0][6] + ' samples / ' + data[0][1] * 2.5e-5 + 'S';
+  document.getElementById('frequency_range').innerHTML = data[0][20] / 1e4 + 'kHz - ' + (data[0][20] + data[0][19]) / 1e4 + 'kHz';
+  
+  document.getElementById('A1_v_div').innerHTML = data[0][2] * 1e-3 + ' mV / Div';
+  document.getElementById('A1_hz_div').innerHTML = data[0][19] * 1e-2 + ' Hz / Div';
+  document.getElementById('A2_v_div').innerHTML = data[0][4] * 1e-3 + ' mV / Div';
+  document.getElementById('A2_hz_div').innerHTML = data[0][19] * 1e-2 + ' Hz / Div';
+  
+  var iMin = Math.min.apply(Math, data[3]);
+  var iMax = Math.max.apply(Math, data[3]);
+  document.getElementById('SR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / data[0][6] * data[3].indexOf(iMin) + ' Hz';
+  document.getElementById('SR_i').innerHTML = iMin + ' Ohm';
+  document.getElementById('SR_q').innerHTML = 'n/a' ;
+  document.getElementById('PR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / data[0][6] * data[3].indexOf(iMax) + ' Hz';
+  document.getElementById('PR_i').innerHTML = iMax + ' Ohm';
+  document.getElementById('PR_q').innerHTML = 'n/a';
 };
 
 function drawDiagram(){

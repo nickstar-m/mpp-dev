@@ -6,12 +6,40 @@
     <link rel="stylesheet" type="text/css" media="all"  href="css/site.css" />
   </head>
   <body>
-    <h3>Acoustic System Frequency Responce Analyser</h1>
-    <div>Choose file:</div>
-
-    <button id="importFile">Import file</button>
+    <h4 align="center">Acoustic System Frequency Responce Analyser</h4>
     <div>
-      <table id="filedata">
+      <table id="filedata" class="site-header border">
+	    <tr>
+		  <td><button id="importFile">Import file</button></td>
+		  <td id="filename" colspan="2">[Import file to investigate]</td>
+		  <td id="device">Device</td>
+		  <td id="samples">Samples</td>
+		  <td id="frequency_range">Frequency range</td>
+		</tr>
+	    <tr>
+		  <td class="masthead"><b>Channel A1</b></td>
+		  <td id="A1_v_div">V/Div</td>
+		  <td id="A1_hz_div">Hz/div</td>
+		  <td class="masthead"><b>Channel A2</b></td>
+		  <td id="A2_v_div">V/Div</td>
+		  <td id="A2_hz_div">Hz/div</td>
+		</tr>
+	    <tr>
+		  <td class="masthead">Serial resonance</td>
+		  <td id="SR_f">Frequency</td>
+		  <td id="SR_i">Impedance</td>
+		  <td id="SR_q">Q</td>
+		  <td id="C0">Co</td>
+		  <td id="Cm">Cm</td>
+		</tr>
+	    <tr>
+		  <td class="masthead">Parallel resonance</td>
+		  <td id="PR_f">Frequency</td>
+		  <td id="PR_i">Impedance</td>
+		  <td id="PR_q">Q</td>
+		  <td id="Lm">Lm</td>
+		  <td id="Ladd">Ladd</td>
+		</tr>
       </table>
     </div>
     <div>
