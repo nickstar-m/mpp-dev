@@ -4,7 +4,7 @@ var data;
 document.getElementById('importFile').addEventListener('click', function(e) {
   var table;
   
-  chrome.fileSystem.chooseEntry({type: 'openFile'}, function(readOnlyEntry) {
+  chrome.fileSystem.chooseEntry({type: 'openFile', accepts: [{extensions: ['pvd']}]}, function(readOnlyEntry) {
 
     readOnlyEntry.file(function(file) {
       var reader = new FileReader();
@@ -72,18 +72,25 @@ function showHeader(){
   
   var iMin = Math.min.apply(Math, data[3]);
   var iMax = Math.max.apply(Math, data[3]);
-  document.getElementById('SR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / data[0][6] * data[3].indexOf(iMin) + ' Hz';
+  document.getElementById('SR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / (data[0][6] - data[0][7]) * (data[3].indexOf(iMin) - data[0][7]) + ' Hz';
   document.getElementById('SR_i').innerHTML = iMin + ' Ohm';
   document.getElementById('SR_q').innerHTML = 'n/a' ;
-  document.getElementById('PR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / data[0][6] * data[3].indexOf(iMax) + ' Hz';
+  document.getElementById('PR_f').innerHTML = data[0][20] / 1e4 + data[0][19] / 1e4 / (data[0][6] - data[0][7]) * (data[3].indexOf(iMax) - data[0][7]) + ' Hz';
   document.getElementById('PR_i').innerHTML = iMax + ' Ohm';
   document.getElementById('PR_q').innerHTML = 'n/a';
 };
 
+function showGrid(minX, maxX, minY, maxY){
+
+}
+
 function drawDiagram(){
   var c = document.getElementById("diagram");
+  c.width = window.innerWidth;
+  c.height = window.innerHeight - c.offsetTop;
+
   var ctx = c.getContext("2d");
-  ctx.fillRect(0,0,1024,768);
+  ctx.fillRect(0,0,c.width, c.height);
   ctx.strokeStyle="#003F00";
   
   const leftMargin = 50;
@@ -93,23 +100,30 @@ function drawDiagram(){
   // Drawing the Grid
   ctx.beginPath();
   //horizontal
-  for (i=leftMargin; i<1024; i +=100){
-    ctx.moveTo(i, 768-bottomMargin);
+  for (i=leftMargin; i<c.width; i +=100){
+    ctx.moveTo(i, c.height-bottomMargin);
     ctx.lineTo(i, 0);
   }
  //vertical
-  for (i=bottomMargin; i<768;i +=50){
-    ctx.moveTo(leftMargin, 768-i);
-    ctx.lineTo(1024, 768-i);
+  for (i=bottomMargin; i<c.height;i +=50){
+    ctx.moveTo(leftMargin, c.height-i);
+    ctx.lineTo(c.width, c.height-i);
   }
   ctx.stroke();
   
   ctx.strokeStyle="#00FF00";
   ctx.beginPath();
 
-  ctx.moveTo(leftMargin, 768-bottomMargin);
-  ctx.lineTo(1024, 500);
+  ctx.moveTo(leftMargin, c.height-bottomMargin);
+  ctx.lineTo(c.width, 500);
 
   ctx.stroke();
   
 };
+
+window.addEventListener("resize", function() {
+   drawDiagram()
+});
+
+drawDiagram();
+
