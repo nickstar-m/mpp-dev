@@ -34,22 +34,27 @@
 #include "stm32f0xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "hd44780.h"
+#include "hd44780_stm32f0xx.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim3;
-
+HD44780 lcd;
+HD44780_STM32F0xx_GPIO_Driver lcd_pindriver;
+volatile uint32_t systick_ms = 0;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
-
+void init_lcd(void);
+void delay_microseconds(uint16_t us);
+uint32_t uint32_time_diff(uint32_t now, uint32_t before);
+void hd44780_assert_failure_handler(const char *filename, unsigned long line);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
@@ -79,6 +84,7 @@ int main(void)
   MX_TIM3_Init();
 
   /* USER CODE BEGIN 2 */
+	init_lcd();
 
   /* USER CODE END 2 */
 
@@ -193,6 +199,58 @@ void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void init_lcd(void)
+{
+  const HD44780_STM32F0xx_Pinout lcd_pinout =
+  {
+    {
+      /* RS        */  { GPIOB, GPIO_PIN_3 },
+      /* ENABLE    */  { GPIOB, GPIO_PIN_5 },
+      /* RW        */  { GPIOB, GPIO_PIN_4 },
+      /* Backlight */  { NULL, 0 },
+      /* DP0       */  { GPIOA, GPIO_PIN_8 },
+      /* DP1       */  { GPIOA, GPIO_PIN_9 },
+      /* DP2       */  { GPIOA, GPIO_PIN_10 },
+      /* DP3       */  { GPIOA, GPIO_PIN_11 },
+      /* DP4       */  { GPIOA, GPIO_PIN_12 },
+      /* DP5       */  { GPIOA, GPIO_PIN_13 },
+      /* DP6       */  { GPIOA, GPIO_PIN_14 },
+      /* DP7       */  { GPIOA, GPIO_PIN_15 },
+    }
+  };
+
+  lcd_pindriver.interface = HD44780_STM32F0XX_PINDRIVER_INTERFACE;
+  lcd_pindriver.pinout = lcd_pinout;
+  lcd_pindriver.assert_failure_handler = hd44780_assert_failure_handler;
+
+  const HD44780_Config lcd_config =
+  {
+    (HD44780_GPIO_Interface*)&lcd_pindriver,
+    delay_microseconds,
+    hd44780_assert_failure_handler,
+    HD44780_OPT_USE_RW
+  };
+
+  //RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+  hd44780_init(&lcd, HD44780_MODE_8BIT, &lcd_config, 16, 2, HD44780_CHARSIZE_5x8);
+}
+
+void delay_microseconds(uint16_t us)
+{
+  HAL_Delay(us);
+}
+
+uint32_t uint32_time_diff(uint32_t now, uint32_t before)
+{
+  return (now >= before) ? (now - before) : (UINT32_MAX - before + now);
+}
+
+void hd44780_assert_failure_handler(const char *filename, unsigned long line)
+{
+  (void)filename; (void)line;
+  do {} while (1);
+}
 
 /* USER CODE END 4 */
 

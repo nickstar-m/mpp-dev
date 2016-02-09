@@ -359,7 +359,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls>--C99</MiscControls>
@@ -507,6 +507,21 @@
               <FileName>startup_stm32f030x6.s</FileName>
               <FileType>2</FileType>
               <FilePath>..\Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\arm\startup_stm32f030x6.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LCD</GroupName>
+          <Files>
+            <File>
+              <FileName>hd44780.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\hd44780.c</FilePath>
+            </File>
+            <File>
+              <FileName>hd44780_stm32f0xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\hd44780_stm32f0xx.c</FilePath>
             </File>
           </Files>
         </Group>
