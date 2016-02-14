@@ -1,0 +1,9 @@
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f030x6.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Include\core_cm0.h
+synthesizer configuration\system_stm32f0xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Include\core_cmInstr.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Include\core_cmFunc.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h
+synthesizer configuration\system_stm32f0xx.o: ..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal.h
