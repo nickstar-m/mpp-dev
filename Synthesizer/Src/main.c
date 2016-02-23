@@ -95,6 +95,23 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+    static uint32_t lcd_update_ms = 0;
+
+    if (uint32_time_diff(systick_ms, lcd_update_ms) >= 1000)
+    {
+      lcd_update_ms = systick_ms;
+
+      static unsigned counter = 0;
+
+      const size_t buf_size = lcd.columns_amount + 1;
+      char buf[buf_size];
+      snprintf(buf, buf_size, "%d", counter);
+
+      ++counter;
+
+      hd44780_clear(&lcd);
+      hd44780_write_string(&lcd, buf);
+    }
 
   }
   /* USER CODE END 3 */

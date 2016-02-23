@@ -17,6 +17,7 @@
 "synthesizer configuration\stm32f0xx_hal.o"
 "synthesizer configuration\startup_stm32f030x6.o"
 "synthesizer configuration\hd44780.o"
+"synthesizer configuration\hd44780_stm32f0xx.o"
 --library_type=microlib --strict --scatter "Synthesizer Configuration\Synthesizer Configuration.sct"
 
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
