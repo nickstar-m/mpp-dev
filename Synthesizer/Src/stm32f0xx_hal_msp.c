@@ -34,6 +34,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f0xx_hal.h"
 
+extern void Error_Handler(void);
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -47,10 +48,14 @@ void HAL_MspInit(void)
 
   /* USER CODE END MspInit 0 */
 
-  __SYSCFG_CLK_ENABLE();
+  __HAL_RCC_SYSCFG_CLK_ENABLE();
 
   /* System interrupt init*/
-/* SysTick_IRQn interrupt configuration */
+  /* SVC_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(SVC_IRQn, 0, 0);
+  /* PendSV_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(PendSV_IRQn, 0, 0);
+  /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 
   /* USER CODE BEGIN MspInit 1 */
@@ -68,16 +73,16 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* htim_encoder)
 
   /* USER CODE END TIM3_MspInit 0 */
     /* Peripheral clock enable */
-    __TIM3_CLK_ENABLE();
+    __HAL_RCC_TIM3_CLK_ENABLE();
   
     /**TIM3 GPIO Configuration    
     PA6     ------> TIM3_CH1
     PA7     ------> TIM3_CH2 
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+    GPIO_InitStruct.Pin = ENC_A_Pin|ENC_B_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF1_TIM3;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
@@ -97,13 +102,13 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* htim_encoder)
 
   /* USER CODE END TIM3_MspDeInit 0 */
     /* Peripheral clock disable */
-    __TIM3_CLK_DISABLE();
+    __HAL_RCC_TIM3_CLK_DISABLE();
   
     /**TIM3 GPIO Configuration    
     PA6     ------> TIM3_CH1
     PA7     ------> TIM3_CH2 
     */
-    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_6|GPIO_PIN_7);
+    HAL_GPIO_DeInit(GPIOA, ENC_A_Pin|ENC_B_Pin);
 
   }
   /* USER CODE BEGIN TIM3_MspDeInit 1 */

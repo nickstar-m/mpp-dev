@@ -34,30 +34,38 @@
 #include "stm32f0xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-#include "hd44780.h"
+//#include "hd44780.h"
 #include "hd44780_stm32f0xx.h"
+//#include "ad9850.h"
+#include "ad9850_stm32f0xx.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim3;
+
+/* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
 HD44780 lcd;
 HD44780_STM32F0xx_GPIO_Driver lcd_pindriver;
 volatile uint32_t systick_ms = 0;
-/* USER CODE BEGIN PV */
-/* Private variables ---------------------------------------------------------*/
+AD9850 dds;
+AD9850_STM32F0xx_GPIO_Driver dds_pindriver;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+void Error_Handler(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
+
+/* USER CODE BEGIN PFP */
+/* Private function prototypes -----------------------------------------------*/
 void init_lcd(void);
 void delay_microseconds(uint16_t us);
 uint32_t uint32_time_diff(uint32_t now, uint32_t before);
 void hd44780_assert_failure_handler(const char *filename, unsigned long line);
-/* USER CODE BEGIN PFP */
-/* Private function prototypes -----------------------------------------------*/
-
+void init_AD9850(void);
+void ad9850_assert_failure_handler(const char *filename, unsigned long line);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -85,6 +93,9 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 	init_lcd();
+	hd44780_clear(&lcd);
+	
+	init_AD9850();
 
   /* USER CODE END 2 */
 
@@ -95,11 +106,12 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    static uint32_t lcd_update_ms = 0;
+    
+		static uint32_t lcd_update_ms = 0;
 
-    if (uint32_time_diff(systick_ms, lcd_update_ms) >= 1000)
+    if (uint32_time_diff(HAL_GetTick(), lcd_update_ms) >= 1000)
     {
-      lcd_update_ms = systick_ms;
+      lcd_update_ms = HAL_GetTick();
 
       static unsigned counter = 0;
 
@@ -109,11 +121,12 @@ int main(void)
 
       ++counter;
 
-      hd44780_clear(&lcd);
+      hd44780_move_cursor(&lcd, 0, 0);
       hd44780_write_string(&lcd, buf);
     }
-
+  
   }
+	
   /* USER CODE END 3 */
 
 }
@@ -130,22 +143,31 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = 16;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
-  HAL_RCC_OscConfig(&RCC_OscInitStruct);
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_SYSCLK;
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0);
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 
+  /* SysTick_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
 /* TIM3 init function */
-void MX_TIM3_Init(void)
+static void MX_TIM3_Init(void)
 {
 
   TIM_Encoder_InitTypeDef sConfig;
@@ -165,11 +187,17 @@ void MX_TIM3_Init(void)
   sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
   sConfig.IC2Filter = 0;
-  HAL_TIM_Encoder_Init(&htim3, &sConfig);
+  if (HAL_TIM_Encoder_Init(&htim3, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig);
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
 }
 
@@ -180,39 +208,54 @@ void MX_TIM3_Init(void)
         * EVENT_OUT
         * EXTI
 */
-void MX_GPIO_Init(void)
+static void MX_GPIO_Init(void)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
-  __GPIOF_CLK_ENABLE();
-  __GPIOA_CLK_ENABLE();
-  __GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pins : PA4 PA5 PA8 PA9 
-                           PA10 PA11 PA12 PA13 
-                           PA14 PA15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_8|GPIO_PIN_9 
-                          |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13 
-                          |GPIO_PIN_14|GPIO_PIN_15;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, W_CLK_Pin|FQ_UD_Pin|D0_Pin|D1_Pin 
+                          |D2_Pin|D3_Pin|D4_Pin|D5_Pin 
+                          |D6_Pin|D7_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, RESET_Pin|RS_Pin|R_W_Pin|E_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : W_CLK_Pin FQ_UD_Pin D0_Pin D1_Pin 
+                           D2_Pin D3_Pin D4_Pin D5_Pin 
+                           D6_Pin D7_Pin */
+  GPIO_InitStruct.Pin = W_CLK_Pin|FQ_UD_Pin|D0_Pin|D1_Pin 
+                          |D2_Pin|D3_Pin|D4_Pin|D5_Pin 
+                          |D6_Pin|D7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB0 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  /*Configure GPIO pin : SWITCH_Pin */
+  GPIO_InitStruct.Pin = SWITCH_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(SWITCH_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB1 PB3 PB4 PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5;
+  /*Configure GPIO pins : RESET_Pin RS_Pin R_W_Pin E_Pin */
+  GPIO_InitStruct.Pin = RESET_Pin|RS_Pin|R_W_Pin|E_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /**/
+  HAL_I2CEx_EnableFastModePlus(I2C_FASTMODEPLUS_PA9);
+
+  /**/
+  HAL_I2CEx_EnableFastModePlus(I2C_FASTMODEPLUS_PA10);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -249,13 +292,47 @@ void init_lcd(void)
     HD44780_OPT_USE_RW
   };
 
-  //RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
   hd44780_init(&lcd, HD44780_MODE_8BIT, &lcd_config, 16, 2, HD44780_CHARSIZE_5x8);
+}
+
+void init_AD9850(void)
+{
+  const AD9850_STM32F0xx_Pinout dds_pinout =
+  {
+    {
+      /* RESET     */  { GPIOB, GPIO_PIN_1 },
+      /* FQ_UD     */  { GPIOA, GPIO_PIN_5 },
+      /* W_CLK     */  { GPIOA, GPIO_PIN_4 },
+      /* D0        */  { GPIOA, GPIO_PIN_8 },
+      /* D1        */  { GPIOA, GPIO_PIN_9 },
+      /* D2        */  { GPIOA, GPIO_PIN_10 },
+      /* D3        */  { GPIOA, GPIO_PIN_11 },
+      /* D4        */  { GPIOA, GPIO_PIN_12 },
+      /* D5        */  { GPIOA, GPIO_PIN_13 },
+      /* D6        */  { GPIOA, GPIO_PIN_14 },
+      /* D7        */  { GPIOA, GPIO_PIN_15 },
+    }
+  };
+
+  dds_pindriver.interface = AD9850_STM32F0XX_PINDRIVER_INTERFACE;
+  dds_pindriver.pinout = dds_pinout;
+  dds_pindriver.assert_failure_handler = ad9850_assert_failure_handler;
+
+  const AD9850_Config dds_config =
+  {
+    AD9850_MODE_PARALLEL,
+		(AD9850_GPIO_Interface*)&dds_pindriver,
+    ad9850_assert_failure_handler
+  };
+
+  ad9850_init(&dds, &dds_config);
+	
+	ad9850_write_word(&dds, 25000);
 }
 
 void delay_microseconds(uint16_t us)
 {
-  HAL_Delay(us);
+  HAL_Delay(((uint32_t)us / 1000) + (us % 1000 ? 1 : 0));
 }
 
 uint32_t uint32_time_diff(uint32_t now, uint32_t before)
@@ -269,7 +346,28 @@ void hd44780_assert_failure_handler(const char *filename, unsigned long line)
   do {} while (1);
 }
 
+void ad9850_assert_failure_handler(const char *filename, unsigned long line)
+{
+  (void)filename; (void)line;
+  do {} while (1);
+}
+
 /* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @param  None
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler */
+  /* User can add his own implementation to report the HAL error return state */
+  while(1) 
+  {
+  }
+  /* USER CODE END Error_Handler */ 
+}
 
 #ifdef USE_FULL_ASSERT
 

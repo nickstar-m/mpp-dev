@@ -5,16 +5,15 @@
 extern "C" {
 #endif
 
-#include <stm32f0xx_hal_rcc.h>
-#include <stm32f0xx_hal_gpio.h>
+#include "stm32f0xx_hal.h"
 #include <stdint.h>
 #include "hd44780.h"
-
+	
 typedef struct
 {
   GPIO_TypeDef *gpio;
   uint16_t pinmask;
-} HD44780_STM32F10x_Pin;
+} HD44780_STM32F0xx_Pin;
 
 typedef struct
 {
