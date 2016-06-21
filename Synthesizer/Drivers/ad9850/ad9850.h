@@ -57,7 +57,8 @@ typedef enum { AD9850_MODE_SERIAL, AD9850_MODE_PARALLEL } AD9850_Mode;
 /* Hardware abstraction layer */
 typedef struct
 {
-  AD9850_Mode mode;
+  uint32_t clock_frequency;
+	AD9850_Mode mode;
 	AD9850_GPIO_Interface *gpios;
   AD9850_AssertFn assert_failure_handler;
 } AD9850_Config;
@@ -77,9 +78,8 @@ AD9850_Result ad9850_reset(AD9850 *dds);
 AD9850_Result ad9850_power_on(AD9850 *dds);
 AD9850_Result ad9850_power_off(AD9850 *dds);
 AD9850_Result ad9850_phase_update(AD9850 *dds, uint8_t phase);
-AD9850_Result ad9850_frequency_update(AD9850 *dds, uint32_t frequency);
-AD9850_Result ad9850_full_update(AD9850 *dds, uint8_t control, uint8_t phase, uint32_t frequency);
-AD9850_Result ad9850_write_word(AD9850 *dds, uint64_t word);
+AD9850_Result ad9850_frequency_update(AD9850 *dds, uint64_t frequency);
+AD9850_Result ad9850_full_update(AD9850 *dds, uint8_t control, uint8_t phase, uint64_t frequency);
 
 #ifdef __cplusplus
 }

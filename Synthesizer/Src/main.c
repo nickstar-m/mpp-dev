@@ -50,6 +50,8 @@ HD44780_STM32F0xx_GPIO_Driver lcd_pindriver;
 volatile uint32_t systick_ms = 0;
 AD9850 dds;
 AD9850_STM32F0xx_GPIO_Driver dds_pindriver;
+uint8_t encoder_event;
+uint64_t frequency = 2000000;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,6 +59,7 @@ void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_NVIC_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -69,7 +72,8 @@ void ad9850_assert_failure_handler(const char *filename, unsigned long line);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+#define CW  0
+#define CCW 1
 /* USER CODE END 0 */
 
 int main(void)
@@ -91,11 +95,16 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM3_Init();
 
+  /* Initialize interrupts */
+  MX_NVIC_Init();
+
   /* USER CODE BEGIN 2 */
 	init_lcd();
 	hd44780_clear(&lcd);
 	
 	init_AD9850();
+	
+	HAL_TIM_Encoder_Start_IT(&htim3, TIM_CHANNEL_ALL);
 
   /* USER CODE END 2 */
 
@@ -109,20 +118,34 @@ int main(void)
     
 		static uint32_t lcd_update_ms = 0;
 
-    if (uint32_time_diff(HAL_GetTick(), lcd_update_ms) >= 1000)
+    if (uint32_time_diff(HAL_GetTick(), lcd_update_ms) >= 10)
     {
       lcd_update_ms = HAL_GetTick();
 
       static unsigned counter = 0;
 
-      const size_t buf_size = lcd.columns_amount + 1;
-      char buf[buf_size];
-      snprintf(buf, buf_size, "%d", counter);
+      
+			if (encoder_event == 1)
+			{
+        const size_t buf_size = lcd.columns_amount + 1;
+        char buf[buf_size];
 
-      ++counter;
+        snprintf(buf, buf_size, "F = %llu.%02llu Hz", frequency / 100, frequency % 100);
 
-      hd44780_move_cursor(&lcd, 0, 0);
-      hd44780_write_string(&lcd, buf);
+        ++counter;
+
+        hd44780_move_cursor(&lcd, 0, 0);
+        hd44780_write_string(&lcd, buf);
+
+			  if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW) ++frequency; else --frequency;
+				
+				snprintf(buf, buf_size, "Enc_val: %d:%s ", __HAL_TIM_GET_COUNTER(&htim3), __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW ? "CW" : "CCW");
+			  hd44780_move_cursor(&lcd, 0, 1);
+        hd44780_write_string(&lcd, buf);
+			
+			  ad9850_frequency_update(&dds, frequency);
+				encoder_event = 0;
+			}	
     }
   
   }
@@ -166,6 +189,15 @@ void SystemClock_Config(void)
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
+/** NVIC Configuration
+*/
+static void MX_NVIC_Init(void)
+{
+  /* TIM3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM3_IRQn);
+}
+
 /* TIM3 init function */
 static void MX_TIM3_Init(void)
 {
@@ -176,14 +208,14 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 0;
+  htim3.Init.Period = 255;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   sConfig.EncoderMode = TIM_ENCODERMODE_TI1;
-  sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
+  sConfig.IC1Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
   sConfig.IC1Filter = 0;
-  sConfig.IC2Polarity = TIM_ICPOLARITY_RISING;
+  sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
   sConfig.IC2Filter = 0;
@@ -320,14 +352,14 @@ void init_AD9850(void)
 
   const AD9850_Config dds_config =
   {
-    AD9850_MODE_PARALLEL,
+    125000000,              // clock frequency
+		AD9850_MODE_PARALLEL,
 		(AD9850_GPIO_Interface*)&dds_pindriver,
     ad9850_assert_failure_handler
   };
 
   ad9850_init(&dds, &dds_config);
 	
-	ad9850_write_word(&dds, 25000);
 }
 
 void delay_microseconds(uint16_t us)
@@ -350,6 +382,17 @@ void ad9850_assert_failure_handler(const char *filename, unsigned long line)
 {
   (void)filename; (void)line;
   do {} while (1);
+}
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+	static uint8_t previous_encoder_value;
+	
+	if (__HAL_TIM_GET_COUNTER(htim) != previous_encoder_value)
+	{
+		previous_encoder_value = __HAL_TIM_GET_COUNTER(htim);
+		encoder_event = 1;
+	}	
 }
 
 /* USER CODE END 4 */

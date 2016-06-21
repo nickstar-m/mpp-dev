@@ -110,6 +110,9 @@ void HAL_TIM_Encoder_MspDeInit(TIM_HandleTypeDef* htim_encoder)
     */
     HAL_GPIO_DeInit(GPIOA, ENC_A_Pin|ENC_B_Pin);
 
+    /* Peripheral interrupt DeInit*/
+    HAL_NVIC_DisableIRQ(TIM3_IRQn);
+
   }
   /* USER CODE BEGIN TIM3_MspDeInit 1 */
 

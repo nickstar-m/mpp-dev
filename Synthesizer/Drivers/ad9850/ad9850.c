@@ -40,11 +40,18 @@
 	
 AD9850_Result ad9850_config(AD9850 *dds);
 AD9850_Result ad9850_init(AD9850 *dds, const AD9850_Config *config);
-AD9850_Result ad9850_write_control_byte(AD9850 *dds, uint8_t value);
-AD9850_Result ad9850_write_word(AD9850 *dds, uint64_t word);
 AD9850_Result ad9850_reset(AD9850 *dds);
-AD9850_Result ad9850_send(AD9850 *dds, uint64_t value, uint8_t bit_count);
+AD9850_Result ad9850_power_on(AD9850 *dds);
+AD9850_Result ad9850_power_off(AD9850 *dds);
+AD9850_Result ad9850_phase_update(AD9850 *dds, uint8_t phase);
+AD9850_Result ad9850_frequency_update(AD9850 *dds, uint64_t frequency);
+AD9850_Result ad9850_full_update(AD9850 *dds, uint8_t control, uint8_t phase, uint64_t frequency);
 
+uint32_t AD9850_delta_phase(AD9850 *dds, uint64_t frequency);
+AD9850_Result ad9850_write_word(AD9850 *dds, uint64_t word);	
+AD9850_Result ad9850_send(AD9850 *dds, uint64_t value, uint8_t bit_count);
+	
+	
 AD9850_Result ad9850_init(AD9850 *dds, const AD9850_Config *config)
 {
   AD9850_RETURN_ASSERT(dds != NULL, AD9850_RESULT_ERROR);
@@ -99,26 +106,38 @@ AD9850_Result ad9850_reset(AD9850 *dds)
 	__nop();
 	__nop();
   AD9850_RETURN_IF_ERROR(gpios->write(gpios, AD9850_PIN_RESET, AD9850_PINSTATE_LOW));
+	
+	dds->word40bit = 0;
 
 	return AD9850_RESULT_OK;
 }
 
-AD9850_Result ad9850_write_word(AD9850 *dds, uint64_t word)
+// frequency in Hz * 10E-2
+AD9850_Result ad9850_frequency_update(AD9850 *dds, uint64_t frequency)
 {
   AD9850_RETURN_ASSERT(dds != NULL, AD9850_RESULT_ERROR);
   AD9850_RETURN_ASSERT(dds->cfg.gpios != NULL, AD9850_RESULT_ERROR);
   AD9850_RETURN_ASSERT(dds->cfg.gpios->write != NULL, AD9850_RESULT_ERROR);
 	
-	AD9850_RETURN_IF_ERROR(ad9850_send(dds, word, 40));
+	uint64_t word;
+	uint32_t d_phase = AD9850_delta_phase(dds, frequency);
+	word = (dds->word40bit & !AD9850_MASK_FREQUENCY) | d_phase;
 	
-		return AD9850_RESULT_OK;
+	AD9850_RETURN_IF_ERROR(ad9850_send(dds, word, (dds->cfg.mode == AD9850_MODE_SERIAL) ? 32 : 40));
+	
+	dds->word40bit = word;
+	
+	return AD9850_RESULT_OK;
 }
-
 
 /*----------------------*/
 /*     Internal API     */
 /*----------------------*/
 
+uint32_t AD9850_delta_phase(AD9850 *dds, uint64_t frequency)
+{
+  return (frequency << 32) / dds->cfg.clock_frequency / 100;
+}
 AD9850_Result ad9850_config(AD9850 *dds)
 {
   AD9850_RETURN_ASSERT(dds != NULL, AD9850_RESULT_ERROR);
@@ -139,6 +158,20 @@ AD9850_Result ad9850_config(AD9850 *dds)
   AD9850_RETURN_IF_ERROR(gpios->write(gpios, AD9850_PIN_W_CLK, AD9850_PINSTATE_LOW));
   AD9850_RETURN_IF_ERROR(gpios->write(gpios, AD9850_PIN_FQ_UD, AD9850_PINSTATE_LOW));
 
+  return AD9850_RESULT_OK;
+}
+
+AD9850_Result ad9850_write_word(AD9850 *dds, uint64_t word)
+{
+  AD9850_RETURN_ASSERT(dds != NULL, AD9850_RESULT_ERROR);
+  AD9850_RETURN_ASSERT(dds->cfg.gpios != NULL, AD9850_RESULT_ERROR);
+  AD9850_RETURN_ASSERT(dds->cfg.gpios->write != NULL, AD9850_RESULT_ERROR);
+	
+	AD9850_RETURN_IF_ERROR(ad9850_send(dds, word, 40));
+	
+	// status update
+	dds->word40bit = word;
+	
   return AD9850_RESULT_OK;
 }
 
