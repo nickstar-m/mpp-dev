@@ -50,8 +50,22 @@ HD44780_STM32F0xx_GPIO_Driver lcd_pindriver;
 volatile uint32_t systick_ms = 0;
 AD9850 dds;
 AD9850_STM32F0xx_GPIO_Driver dds_pindriver;
-uint8_t encoder_event;
+uint16_t encoder_event;
 uint64_t frequency = 2000000;
+
+/* Encoder accuracy */
+typedef enum
+{
+	EXTRAFINE   = 0x00,
+	FINE        = 0x01,
+	NORMAL      = 0x02,
+	COARSE      = 0x03,
+	EXTRACOARSE = 0x04,
+} EncoderAccuracyTypeDef;
+
+EncoderAccuracyTypeDef EncoderAccuracy = EXTRAFINE;
+
+const unsigned EncoderStep[] = {1, 5, 9, 13, 17};  /* {EXTRAFINE, FINE, NORMAL, COARSE, EXTRACOARSE}    frequency +- (1 << x) */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -110,6 +124,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	uint8_t steps;
   while (1)
   {
   /* USER CODE END WHILE */
@@ -125,7 +140,7 @@ int main(void)
       static unsigned counter = 0;
 
       
-			if (encoder_event == 1)
+			if (encoder_event > 0)
 			{
         const size_t buf_size = lcd.columns_amount + 1;
         char buf[buf_size];
@@ -137,9 +152,12 @@ int main(void)
         hd44780_move_cursor(&lcd, 0, 0);
         hd44780_write_string(&lcd, buf);
 
-			  if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW) ++frequency; else --frequency;
+			  if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW)
+          frequency += 1 << EncoderStep[EncoderAccuracy];
+				else
+          frequency -= 1 << EncoderStep[EncoderAccuracy];
 				
-				snprintf(buf, buf_size, "Enc_val: %d:%s ", __HAL_TIM_GET_COUNTER(&htim3), __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW ? "CW" : "CCW");
+				snprintf(buf, buf_size, "Enc_val: %u:%s ", encoder_event/*__HAL_TIM_GET_COUNTER(&htim3)*/, __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW ? "CW" : "CCW");
 			  hd44780_move_cursor(&lcd, 0, 1);
         hd44780_write_string(&lcd, buf);
 			
@@ -386,12 +404,51 @@ void ad9850_assert_failure_handler(const char *filename, unsigned long line)
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-	static uint8_t previous_encoder_value;
+	static uint8_t PreviousEncoderValue;
+	static uint32_t PreviousTick = 0;
+	static uint16_t EncoderAverageStepTime = 150 * 8;
+	uint16_t step_time;
+	uint16_t average_time;
+
 	
-	if (__HAL_TIM_GET_COUNTER(htim) != previous_encoder_value)
+	if (__HAL_TIM_GET_COUNTER(htim) != PreviousEncoderValue)
 	{
-		previous_encoder_value = __HAL_TIM_GET_COUNTER(htim);
-		encoder_event = 1;
+	  step_time = HAL_GetTick() - PreviousTick;
+    
+		if (step_time < 400) // < 0.4 sec
+		{
+      average_time = EncoderAverageStepTime >> 3;
+			EncoderAverageStepTime = EncoderAverageStepTime - average_time + step_time;
+			if (average_time > 120)
+			  EncoderAccuracy = EXTRAFINE;
+			else
+        if (average_time > 60)
+          EncoderAccuracy = FINE;
+        else  
+				  if (average_time > 30)
+            EncoderAccuracy = NORMAL;
+					else
+				    if (average_time > 15)
+              EncoderAccuracy = COARSE;
+					  else
+              EncoderAccuracy = EXTRACOARSE;
+		}	
+    if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW)
+		{
+		  if (__HAL_TIM_GET_COUNTER(htim) > PreviousEncoderValue)
+				encoder_event = __HAL_TIM_GET_COUNTER(htim) - PreviousEncoderValue;
+			else
+				encoder_event = 256 + __HAL_TIM_GET_COUNTER(htim) - PreviousEncoderValue;
+		}	
+		else
+		{
+		  if (__HAL_TIM_GET_COUNTER(htim) < PreviousEncoderValue)
+				encoder_event = PreviousEncoderValue - __HAL_TIM_GET_COUNTER(htim);
+			else
+				encoder_event = 256 + PreviousEncoderValue - __HAL_TIM_GET_COUNTER(htim);
+		}
+		PreviousEncoderValue = __HAL_TIM_GET_COUNTER(htim);
+    PreviousTick = HAL_GetTick();
 	}	
 }
 
