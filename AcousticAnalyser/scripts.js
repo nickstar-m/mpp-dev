@@ -80,12 +80,18 @@ function showHeader(){
   document.getElementById('PR_q').innerHTML = 'n/a';
 };
 
-function showGrid(minX, maxX, minY, maxY){
+function showGrid(context, minX, maxX, minY, maxY){
+ context.fillStyle = '#FFFFFF';
+ context.font = '12px monospace';
+ context.textBaseline = 'top';
+ context.textAlign = 'right';
+ context.fillText ("40.0k", 45, 20);
 
 }
 
 function drawDiagram(){
   var c = document.getElementById("diagram");
+  var Fmin, Fmax, valMin, valMax;
   c.width = window.innerWidth;
   c.height = window.innerHeight - c.offsetTop;
 
@@ -93,11 +99,14 @@ function drawDiagram(){
   ctx.fillRect(0,0,c.width, c.height);
   ctx.strokeStyle="#003F00";
   
+  Fmin=10000; Fmax=15000; valMin=0; valMax=10;
+  showGrid(ctx, Fmin, Fmax, valMin, valMax); // Drawing the Grid
+   
   const leftMargin = 50;
   const bottomMargin = 50;
   ctx.fillStyle="#001F00";
   var i;
-  // Drawing the Grid
+
   ctx.beginPath();
   //horizontal
   for (i=leftMargin; i<c.width; i +=100){
