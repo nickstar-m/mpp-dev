@@ -157,6 +157,7 @@ int main(void)
 				else
           frequency -= 1 << EncoderStep[EncoderAccuracy];
 				
+				if (frequency < 1000 || frequency > 8000000000) frequency = 1000;
 				snprintf(buf, buf_size, "Enc_val: %u:%s ", encoder_event/*__HAL_TIM_GET_COUNTER(&htim3)*/, __HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW ? "CW" : "CCW");
 			  hd44780_move_cursor(&lcd, 0, 1);
         hd44780_write_string(&lcd, buf);
@@ -232,11 +233,11 @@ static void MX_TIM3_Init(void)
   sConfig.IC1Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC1Filter = 0;
+  sConfig.IC1Filter = 1;
   sConfig.IC2Polarity = TIM_ICPOLARITY_FALLING;
   sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
   sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
-  sConfig.IC2Filter = 0;
+  sConfig.IC2Filter = 1;
   if (HAL_TIM_Encoder_Init(&htim3, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -406,34 +407,41 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
 	static uint8_t PreviousEncoderValue;
 	static uint32_t PreviousTick = 0;
-	static uint16_t EncoderAverageStepTime = 150 * 8;
+	static uint16_t EncoderAverageStepTime = 64 * 2;
 	uint16_t step_time;
 	uint16_t average_time;
 
 	
 	if (__HAL_TIM_GET_COUNTER(htim) != PreviousEncoderValue)
 	{
-	  step_time = HAL_GetTick() - PreviousTick;
+	  step_time = (HAL_GetTick() - PreviousTick) > 500 ? 500 : HAL_GetTick() - PreviousTick;
     
-		if (step_time < 400) // < 0.4 sec
+		if (step_time < 500) // < 0.5 sec
 		{
-      average_time = EncoderAverageStepTime >> 3;
+      average_time = EncoderAverageStepTime >> 1;
 			EncoderAverageStepTime = EncoderAverageStepTime - average_time + step_time;
-			if (average_time > 120)
+			if (average_time > 128)
 			  EncoderAccuracy = EXTRAFINE;
 			else
-        if (average_time > 60)
+        if (average_time > 64)
           EncoderAccuracy = FINE;
         else  
-				  if (average_time > 30)
+				  if (average_time > 32)
             EncoderAccuracy = NORMAL;
 					else
-				    if (average_time > 15)
+				    if (average_time > 16)
               EncoderAccuracy = COARSE;
 					  else
               EncoderAccuracy = EXTRACOARSE;
-		}	
-    if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW)
+		}
+    else
+      if (EncoderAccuracy > FINE)
+      {
+				EncoderAccuracy = FINE;
+				EncoderAverageStepTime = 128 * 2;
+			}	
+    
+		if (__HAL_TIM_IS_TIM_COUNTING_DOWN(&htim3) == CW)
 		{
 		  if (__HAL_TIM_GET_COUNTER(htim) > PreviousEncoderValue)
 				encoder_event = __HAL_TIM_GET_COUNTER(htim) - PreviousEncoderValue;
