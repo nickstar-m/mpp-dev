@@ -1,0 +1,28 @@
+--cpu Cortex-M0
+"usg-mini_control\stm32f0xx_hal_uart_ex.o"
+"usg-mini_control\stm32f0xx_hal_i2c_ex.o"
+"usg-mini_control\stm32f0xx_hal_gpio.o"
+"usg-mini_control\stm32f0xx_hal_i2c.o"
+"usg-mini_control\stm32f0xx_hal_tim_ex.o"
+"usg-mini_control\stm32f0xx_hal_flash_ex.o"
+"usg-mini_control\stm32f0xx_hal_rcc.o"
+"usg-mini_control\stm32f0xx_hal_dma.o"
+"usg-mini_control\stm32f0xx_hal_rcc_ex.o"
+"usg-mini_control\stm32f0xx_hal_cortex.o"
+"usg-mini_control\stm32f0xx_hal_pwr_ex.o"
+"usg-mini_control\stm32f0xx_hal.o"
+"usg-mini_control\stm32f0xx_hal_flash.o"
+"usg-mini_control\stm32f0xx_hal_tim.o"
+"usg-mini_control\stm32f0xx_hal_uart.o"
+"usg-mini_control\stm32f0xx_hal_pwr.o"
+"usg-mini_control\stm32f0xx_hal_msp.o"
+"usg-mini_control\stm32f0xx_it.o"
+"usg-mini_control\main.o"
+"usg-mini_control\onewire.o"
+"usg-mini_control\control.o"
+"usg-mini_control\startup_stm32f030x6.o"
+"usg-mini_control\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "USG-mini_control\USG-mini_control.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "USG-mini_control.map" -o USG-mini_control\USG-mini_control.axf
